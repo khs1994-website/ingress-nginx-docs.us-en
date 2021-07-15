@@ -1,0 +1,2597 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Configmap · Ingress Nginx 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="custom-template.html" />
+    
+    
+    <link rel="prev" href="annotations.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Deploy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../deploy/baremetal.html">
+            
+                <a href="../../deploy/baremetal.html">
+            
+                    
+                    Baremetal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../deploy/hardening-guide.html">
+            
+                <a href="../../deploy/hardening-guide.html">
+            
+                    
+                    Hardening Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../deploy/">
+            
+                <a href="../../deploy/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../deploy/rbac.html">
+            
+                <a href="../../deploy/rbac.html">
+            
+                    
+                    Rbac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../deploy/upgrade.html">
+            
+                <a href="../../deploy/upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Developer Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../developer-guide/code-overview.html">
+            
+                <a href="../../developer-guide/code-overview.html">
+            
+                    
+                    Code Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../developer-guide/getting-started.html">
+            
+                <a href="../../developer-guide/getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../enhancements/">
+            
+                <a href="../../enhancements/">
+            
+                    
+                    Enhancements
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../enhancements/20190724-only-dynamic-ssl.html">
+            
+                <a href="../../enhancements/20190724-only-dynamic-ssl.html">
+            
+                    
+                    Remove Static SSL Configuration Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../enhancements/20190815-zone-aware-routing.html">
+            
+                <a href="../../enhancements/20190815-zone-aware-routing.html">
+            
+                    
+                    Availability Zone Aware Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../enhancements/YYYYMMDD-kep-template.html">
+            
+                <a href="../../enhancements/YYYYMMDD-kep-template.html">
+            
+                    
+                    KEP Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Affinity
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../examples/affinity/cookie/">
+            
+                <a href="../../examples/affinity/cookie/">
+            
+                    
+                    Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../examples/auth/basic/">
+            
+                <a href="../../examples/auth/basic/">
+            
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../examples/auth/client-certs/">
+            
+                <a href="../../examples/auth/client-certs/">
+            
+                    
+                    Client Certs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../examples/auth/external-auth/">
+            
+                <a href="../../examples/auth/external-auth/">
+            
+                    
+                    External Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../../examples/auth/oauth-external-auth/">
+            
+                <a href="../../examples/auth/oauth-external-auth/">
+            
+                    
+                    Oauth External Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    Customization
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../examples/customization/configuration-snippets/">
+            
+                <a href="../../examples/customization/configuration-snippets/">
+            
+                    
+                    Configuration Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../examples/customization/custom-configuration/">
+            
+                <a href="../../examples/customization/custom-configuration/">
+            
+                    
+                    Custom Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../examples/customization/custom-errors/">
+            
+                <a href="../../examples/customization/custom-errors/">
+            
+                    
+                    Custom Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../../examples/customization/custom-headers/">
+            
+                <a href="../../examples/customization/custom-headers/">
+            
+                    
+                    Custom Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../../examples/customization/external-auth-headers/">
+            
+                <a href="../../examples/customization/external-auth-headers/">
+            
+                    
+                    External Auth Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../../examples/customization/ssl-dh-param/">
+            
+                <a href="../../examples/customization/ssl-dh-param/">
+            
+                    
+                    Ssl Dh Param
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../../examples/customization/sysctl/">
+            
+                <a href="../../examples/customization/sysctl/">
+            
+                    
+                    Sysctl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../examples/docker-registry/">
+            
+                <a href="../../examples/docker-registry/">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../examples/grpc/">
+            
+                <a href="../../examples/grpc/">
+            
+                    
+                    Grpc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../examples/multi-tls/">
+            
+                <a href="../../examples/multi-tls/">
+            
+                    
+                    Multi Tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../examples/psp/">
+            
+                <a href="../../examples/psp/">
+            
+                    
+                    Psp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../examples/rewrite/">
+            
+                <a href="../../examples/rewrite/">
+            
+                    
+                    Rewrite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../examples/static-ip/">
+            
+                <a href="../../examples/static-ip/">
+            
+                    
+                    Static Ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../examples/tls-termination/">
+            
+                <a href="../../examples/tls-termination/">
+            
+                    
+                    Tls Termination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../examples/">
+            
+                <a href="../../examples/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../../examples/PREREQUISITES.html">
+            
+                <a href="../../examples/PREREQUISITES.html">
+            
+                    
+                    PREREQUISITES
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    User Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Nginx Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.1.2" data-path="configmap.html">
+            
+                <a href="configmap.html">
+            
+                    
+                    Configmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="custom-template.html">
+            
+                <a href="custom-template.html">
+            
+                    
+                    Custom Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="log-format.html">
+            
+                <a href="log-format.html">
+            
+                    
+                    Log Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    Third Party Addons
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../third-party-addons/modsecurity.html">
+            
+                <a href="../third-party-addons/modsecurity.html">
+            
+                    
+                    Modsecurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../third-party-addons/opentracing.html">
+            
+                <a href="../third-party-addons/opentracing.html">
+            
+                    
+                    Opentracing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../basic-usage.html">
+            
+                <a href="../basic-usage.html">
+            
+                    
+                    Basic Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../cli-arguments.html">
+            
+                <a href="../cli-arguments.html">
+            
+                    
+                    Cli Arguments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../custom-errors.html">
+            
+                <a href="../custom-errors.html">
+            
+                    
+                    Custom Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../default-backend.html">
+            
+                <a href="../default-backend.html">
+            
+                    
+                    Default Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../exposing-tcp-udp-services.html">
+            
+                <a href="../exposing-tcp-udp-services.html">
+            
+                    
+                    Exposing Tcp Udp Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../external-articles.html">
+            
+                <a href="../external-articles.html">
+            
+                    
+                    External Articles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../fcgi-services.html">
+            
+                <a href="../fcgi-services.html">
+            
+                    
+                    Fcgi Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../ingress-path-matching.html">
+            
+                <a href="../ingress-path-matching.html">
+            
+                    
+                    Ingress Path Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../miscellaneous.html">
+            
+                <a href="../miscellaneous.html">
+            
+                    
+                    Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../monitoring.html">
+            
+                <a href="../monitoring.html">
+            
+                    
+                    Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../multiple-ingress.html">
+            
+                <a href="../multiple-ingress.html">
+            
+                    
+                    Multiple Ingress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../tls.html">
+            
+                <a href="../tls.html">
+            
+                    
+                    Tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../e2e-tests.html">
+            
+                <a href="../../e2e-tests.html">
+            
+                    
+                    E 2 E Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../how-it-works.html">
+            
+                <a href="../../how-it-works.html">
+            
+                    
+                    How It Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../kubectl-plugin.html">
+            
+                <a href="../../kubectl-plugin.html">
+            
+                    
+                    Kubectl Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../troubleshooting.html">
+            
+                <a href="../../troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Configmap</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="configmaps">ConfigMaps</h1>
+<p>ConfigMaps allow you to decouple configuration artifacts from image content to keep containerized applications portable.</p>
+<p>The ConfigMap API resource stores configuration data as key-value pairs. The data provides the configurations for system
+components for the nginx-controller.</p>
+<p>In order to overwrite nginx-controller configuration values as seen in <a href="https://github.com/kubernetes/ingress-nginx/blob/master/internal/ingress/controller/config/config.go" target="_blank">config.go</a>,
+you can add key-value pairs to the data section of the config-map. For Example:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">map-hash-bucket-size</span><span class="token punctuation">:</span> <span class="token string">&quot;128&quot;</span>
+  <span class="token key atrule">ssl-protocols</span><span class="token punctuation">:</span> SSLv2
+</code></pre>
+<p>!!! important
+    The key and values in a ConfigMap can only be strings.
+    This means that we want a value with boolean values we need to quote the values, like &quot;true&quot; or &quot;false&quot;.
+    Same for numbers, like &quot;100&quot;.</p>
+<pre class="language-"><code>&quot;Slice&quot; types (defined below as `[]string` or `[]int`) can be provided as a comma-delimited string.
+</code></pre><h2 id="configuration-options">Configuration options</h2>
+<p>The following table shows a configuration option&apos;s name, type, and the default value:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">name</th>
+<th style="text-align:left">type</th>
+<th style="text-align:left">default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="#add-headers">add-headers</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#allow-backend-server-header">allow-backend-server-header</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#hide-headers">hide-headers</a></td>
+<td style="text-align:left">string array</td>
+<td style="text-align:left">empty</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#access-log-params">access-log-params</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#access-log-path">access-log-path</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;/var/log/nginx/access.log&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#http-access-log-path">http-access-log-path</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#stream-access-log-path">stream-access-log-path</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#enable-access-log-for-default-backend">enable-access-log-for-default-backend</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#error-log-path">error-log-path</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;/var/log/nginx/error.log&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#enable-modsecurity">enable-modsecurity</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#modsecurity-snippet">modsecurity-snippet</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#enable-owasp-modsecurity-crs">enable-owasp-modsecurity-crs</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#client-header-buffer-size">client-header-buffer-size</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;1k&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#client-header-timeout">client-header-timeout</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">60</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#client-body-buffer-size">client-body-buffer-size</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;8k&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#client-body-timeout">client-body-timeout</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">60</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#disable-access-log">disable-access-log</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">false</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#disable-ipv6">disable-ipv6</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">false</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#disable-ipv6-dns">disable-ipv6-dns</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">false</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#enable-underscores-in-headers">enable-underscores-in-headers</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">false</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#enable-ocsp">enable-ocsp</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">false</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ignore-invalid-headers">ignore-invalid-headers</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">true</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#retry-non-idempotent">retry-non-idempotent</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#error-log-level">error-log-level</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;notice&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#http2-max-field-size">http2-max-field-size</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;4k&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#http2-max-header-size">http2-max-header-size</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;16k&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#http2-max-requests">http2-max-requests</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">1000</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#http2-max-concurrent-streams">http2-max-concurrent-streams</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">1000</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#hsts">hsts</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#hsts-include-subdomains">hsts-include-subdomains</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#hsts-max-age">hsts-max-age</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;15724800&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#hsts-preload">hsts-preload</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#keep-alive">keep-alive</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">75</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#keep-alive-requests">keep-alive-requests</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">100</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#large-client-header-buffers">large-client-header-buffers</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;4 8k&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#log-format-escape-json">log-format-escape-json</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#log-format-upstream">log-format-upstream</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><code>$remote_addr - $remote_user [$time_local] &quot;$request&quot; $status $body_bytes_sent &quot;$http_referer&quot; &quot;$http_user_agent&quot; $request_length $request_time [$proxy_upstream_name] [$proxy_alternative_upstream_name] $upstream_addr $upstream_response_length $upstream_response_time $upstream_status $req_id</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#log-format-stream">log-format-stream</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><code>[$remote_addr] [$time_local] $protocol $status $bytes_sent $bytes_received $session_time</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#enable-multi-accept">enable-multi-accept</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#max-worker-connections">max-worker-connections</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">16384</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#max-worker-open-files">max-worker-open-files</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#max-hash-bucket-size">map-hash-bucket-size</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">64</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#nginx-status-ipv4-whitelist">nginx-status-ipv4-whitelist</a></td>
+<td style="text-align:left">[]string</td>
+<td style="text-align:left">&quot;127.0.0.1&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#nginx-status-ipv6-whitelist">nginx-status-ipv6-whitelist</a></td>
+<td style="text-align:left">[]string</td>
+<td style="text-align:left">&quot;::1&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-real-ip-cidr">proxy-real-ip-cidr</a></td>
+<td style="text-align:left">[]string</td>
+<td style="text-align:left">&quot;0.0.0.0/0&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-set-headers">proxy-set-headers</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#server-name-hash-max-size">server-name-hash-max-size</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">1024</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#server-name-hash-bucket-size">server-name-hash-bucket-size</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>size</span> <span class="token attr-name">of</span> <span class="token attr-name">the</span> <span class="token attr-name">processor&#x2019;s</span> <span class="token attr-name">cache</span> <span class="token attr-name">line</span><span class="token punctuation">&gt;</span></span></code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-headers-hash-max-size">proxy-headers-hash-max-size</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">512</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-headers-hash-bucket-size">proxy-headers-hash-bucket-size</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">64</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#plugins">plugins</a></td>
+<td style="text-align:left">[]string</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#reuse-port">reuse-port</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#server-tokens">server-tokens</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-ciphers">ssl-ciphers</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-ecdh-curve">ssl-ecdh-curve</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;auto&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-dh-param">ssl-dh-param</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-protocols">ssl-protocols</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;TLSv1.2 TLSv1.3&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-session-cache">ssl-session-cache</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-session-cache-size">ssl-session-cache-size</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;10m&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-session-tickets">ssl-session-tickets</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-session-ticket-key">ssl-session-ticket-key</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Randomly</span> <span class="token attr-name">Generated</span><span class="token punctuation">&gt;</span></span></code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-session-timeout">ssl-session-timeout</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;10m&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-buffer-size">ssl-buffer-size</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;4k&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#use-proxy-protocol">use-proxy-protocol</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-protocol-header-timeout">proxy-protocol-header-timeout</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;5s&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#use-gzip">use-gzip</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#use-geoip">use-geoip</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#use-geoip2">use-geoip2</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#enable-brotli">enable-brotli</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#brotli-level">brotli-level</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">4</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#brotli-types">brotli-types</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;application/xml+rss application/atom+xml application/javascript application/x-javascript application/json application/rss+xml application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/svg+xml image/x-icon text/css text/javascript text/plain text/x-component&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#use-http2">use-http2</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#gzip-level">gzip-level</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#gzip-types">gzip-types</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;application/atom+xml application/javascript application/x-javascript application/json application/rss+xml application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/svg+xml image/x-icon text/css text/javascript text/plain text/x-component&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#worker-processes">worker-processes</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Number</span> <span class="token attr-name">of</span> <span class="token attr-name">CPUs</span><span class="token punctuation">&gt;</span></span></code></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#worker-cpu-affinity">worker-cpu-affinity</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#worker-shutdown-timeout">worker-shutdown-timeout</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;240s&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#load-balance">load-balance</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;round_robin&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#variables-hash-bucket-size">variables-hash-bucket-size</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">128</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#variables-hash-max-size">variables-hash-max-size</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">2048</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#upstream-keepalive-connections">upstream-keepalive-connections</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">320</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#upstream-keepalive-timeout">upstream-keepalive-timeout</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">60</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#upstream-keepalive-requests">upstream-keepalive-requests</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">10000</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#limit-conn-zone-variable">limit-conn-zone-variable</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;$binary_remote_addr&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-stream-timeout">proxy-stream-timeout</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;600s&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-stream-next-upstream">proxy-stream-next-upstream</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-stream-next-upstream-timeout">proxy-stream-next-upstream-timeout</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;600s&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-stream-next-upstream-tries">proxy-stream-next-upstream-tries</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-stream-responses">proxy-stream-responses</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#bind-address">bind-address</a></td>
+<td style="text-align:left">[]string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#use-forwarded-headers">use-forwarded-headers</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#enable-real-ip">enable-real-ip</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#forwarded-for-header">forwarded-for-header</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;X-Forwarded-For&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#compute-full-forwarded-for">compute-full-forwarded-for</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-add-original-uri-header">proxy-add-original-uri-header</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#generate-request-id">generate-request-id</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#enable-opentracing">enable-opentracing</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#opentracing-operation-name">opentracing-operation-name</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#opentracing-location-operation-name">opentracing-location-operation-name</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#zipkin-collector-host">zipkin-collector-host</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#zipkin-collector-port">zipkin-collector-port</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">9411</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#zipkin-service-name">zipkin-service-name</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;nginx&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#zipkin-sample-rate">zipkin-sample-rate</a></td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">1.0</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-collector-host">jaeger-collector-host</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-collector-port">jaeger-collector-port</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">6831</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-endpoint">jaeger-endpoint</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-service-name">jaeger-service-name</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;nginx&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-propagation-format">jaeger-propagation-format</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;jaeger&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-sampler-type">jaeger-sampler-type</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;const&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-sampler-param">jaeger-sampler-param</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;1&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-sampler-host">jaeger-sampler-host</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;<a href="http://127.0.0.1" target="_blank">http://127.0.0.1</a>&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-sampler-port">jaeger-sampler-port</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">5778</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-trace-context-header-name">jaeger-trace-context-header-name</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">uber-trace-id</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-debug-header">jaeger-debug-header</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">uber-debug-id</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-baggage-header">jaeger-baggage-header</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">jaeger-baggage</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#jaeger-trace-baggage-header-prefix">jaeger-trace-baggage-header-prefix</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">uberctx-</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#datadog-collector-host">datadog-collector-host</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#datadog-collector-port">datadog-collector-port</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">8126</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#datadog-service-name">datadog-service-name</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;nginx&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#datadog-environment">datadog-environment</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;prod&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#datadog-operation-name-override">datadog-operation-name-override</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;nginx.handle&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#datadog-priority-sampling">datadog-priority-sampling</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#datadog-sample-rate">datadog-sample-rate</a></td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">1.0</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#main-snippet">main-snippet</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#http-snippet">http-snippet</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#server-snippet">server-snippet</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#location-snippet">location-snippet</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#custom-http-errors">custom-http-errors</a></td>
+<td style="text-align:left">[]int</td>
+<td style="text-align:left">[]int{}</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-body-size">proxy-body-size</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;1m&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-connect-timeout">proxy-connect-timeout</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">5</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-read-timeout">proxy-read-timeout</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">60</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-send-timeout">proxy-send-timeout</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">60</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-buffers-number">proxy-buffers-number</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">4</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-buffer-size">proxy-buffer-size</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;4k&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-cookie-path">proxy-cookie-path</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;off&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-cookie-domain">proxy-cookie-domain</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;off&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-next-upstream">proxy-next-upstream</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;error timeout&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-next-upstream-timeout">proxy-next-upstream-timeout</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-next-upstream-tries">proxy-next-upstream-tries</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-redirect-from">proxy-redirect-from</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;off&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-request-buffering">proxy-request-buffering</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;on&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#ssl-redirect">ssl-redirect</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;true&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#whitelist-source-range">whitelist-source-range</a></td>
+<td style="text-align:left">[]string</td>
+<td style="text-align:left">[]string{}</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#skip-access-log-urls">skip-access-log-urls</a></td>
+<td style="text-align:left">[]string</td>
+<td style="text-align:left">[]string{}</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#limit-rate">limit-rate</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#limit-rate-after">limit-rate-after</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#lua-shared-dicts">lua-shared-dicts</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#http-redirect-code">http-redirect-code</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">308</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-buffering">proxy-buffering</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;off&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#limit-req-status-code">limit-req-status-code</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">503</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#limit-conn-status-code">limit-conn-status-code</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">503</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#no-tls-redirect-locations">no-tls-redirect-locations</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;/.well-known/acme-challenge&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-auth-url">global-auth-url</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-auth-method">global-auth-method</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-auth-signin">global-auth-signin</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-auth-signin-redirect-param">global-auth-signin-redirect-param</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;rd&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-auth-response-headers">global-auth-response-headers</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-auth-request-redirect">global-auth-request-redirect</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-auth-snippet">global-auth-snippet</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-auth-cache-key">global-auth-cache-key</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-auth-cache-duration">global-auth-cache-duration</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;200 202 401 5m&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#no-auth-locations">no-auth-locations</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;/.well-known/acme-challenge&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#block-cidrs">block-cidrs</a></td>
+<td style="text-align:left">[]string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#block-user-agents">block-user-agents</a></td>
+<td style="text-align:left">[]string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#block-referers">block-referers</a></td>
+<td style="text-align:left">[]string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#proxy-ssl-location-only">proxy-ssl-location-only</a></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left">&quot;false&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#default-type">default-type</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;text/html&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-rate-limit">global-rate-limit-memcached-host</a></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&quot;&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-rate-limit">global-rate-limit-memcached-port</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">11211</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-rate-limit">global-rate-limit-memcached-connect-timeout</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">50</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-rate-limit">global-rate-limit-memcached-max-idle-timeout</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">10000</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-rate-limit">global-rate-limit-memcached-pool-size</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">50</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="#global-rate-limit">global-rate-limit-status-code</a></td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">429</td>
+</tr>
+</tbody>
+</table>
+<h2 id="add-headers">add-headers</h2>
+<p>Sets custom headers from named configmap before sending traffic to the client. See <a href="#proxy-set-headers">proxy-set-headers</a>. <a href="https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/customization/custom-headers" target="_blank">example</a></p>
+<h2 id="allow-backend-server-header">allow-backend-server-header</h2>
+<p>Enables the return of the header Server from the backend instead of the generic nginx string. <em><strong>default:</strong></em> is disabled</p>
+<h2 id="hide-headers">hide-headers</h2>
+<p>Sets additional header that will not be passed from the upstream server to the client response.
+<em><strong>default:</strong></em> empty</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_hide_header" target="_blank">http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_hide_header</a></p>
+<h2 id="access-log-params">access-log-params</h2>
+<p>Additional params for access_log. For example, buffer=16k, gzip, flush=1m</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_log_module.html#access_log" target="_blank">http://nginx.org/en/docs/http/ngx_http_log_module.html#access_log</a></p>
+<h2 id="access-log-path">access-log-path</h2>
+<p>Access log path for both http and stream context. Goes to <code>/var/log/nginx/access.log</code> by default.</p>
+<p><strong>Note:</strong> the file <code>/var/log/nginx/access.log</code> is a symlink to <code>/dev/stdout</code></p>
+<h2 id="http-access-log-path">http-access-log-path</h2>
+<p>Access log path for http context globally.
+<em><strong>default:</strong></em> &quot;&quot;</p>
+<p><strong>Note:</strong> If not specified, the <code>access-log-path</code> will be used.</p>
+<h2 id="stream-access-log-path">stream-access-log-path</h2>
+<p>Access log path for stream context globally.
+<em><strong>default:</strong></em> &quot;&quot;</p>
+<p><strong>Note:</strong> If not specified, the <code>access-log-path</code> will be used.</p>
+<h2 id="enable-access-log-for-default-backend">enable-access-log-for-default-backend</h2>
+<p>Enables logging access to default backend. <em><strong>default:</strong></em> is disabled.</p>
+<h2 id="error-log-path">error-log-path</h2>
+<p>Error log path. Goes to <code>/var/log/nginx/error.log</code> by default.</p>
+<p><strong>Note:</strong> the file <code>/var/log/nginx/error.log</code> is a symlink to <code>/dev/stderr</code></p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/ngx_core_module.html#error_log" target="_blank">http://nginx.org/en/docs/ngx_core_module.html#error_log</a></p>
+<h2 id="enable-modsecurity">enable-modsecurity</h2>
+<p>Enables the modsecurity module for NGINX. <em><strong>default:</strong></em> is disabled</p>
+<h2 id="enable-owasp-modsecurity-crs">enable-owasp-modsecurity-crs</h2>
+<p>Enables the OWASP ModSecurity Core Rule Set (CRS). <em><strong>default:</strong></em> is disabled</p>
+<h2 id="modsecurity-snippet">modsecurity-snippet</h2>
+<p>Adds custom rules to modsecurity section of nginx configuration</p>
+<h2 id="client-header-buffer-size">client-header-buffer-size</h2>
+<p>Allows to configure a custom buffer size for reading client request header.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#client_header_buffer_size" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#client_header_buffer_size</a></p>
+<h2 id="client-header-timeout">client-header-timeout</h2>
+<p>Defines a timeout for reading client request header, in seconds.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#client_header_timeout" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#client_header_timeout</a></p>
+<h2 id="client-body-buffer-size">client-body-buffer-size</h2>
+<p>Sets buffer size for reading client request body.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#client_body_buffer_size" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#client_body_buffer_size</a></p>
+<h2 id="client-body-timeout">client-body-timeout</h2>
+<p>Defines a timeout for reading client request body, in seconds.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#client_body_timeout" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#client_body_timeout</a></p>
+<h2 id="disable-access-log">disable-access-log</h2>
+<p>Disables the Access Log from the entire Ingress Controller. <em><strong>default:</strong></em> &apos;&quot;false&quot;&apos;</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_log_module.html#access_log" target="_blank">http://nginx.org/en/docs/http/ngx_http_log_module.html#access_log</a></p>
+<h2 id="disable-ipv6">disable-ipv6</h2>
+<p>Disable listening on IPV6. <em><strong>default:</strong></em> <code>false</code>; IPv6 listening is enabled</p>
+<h2 id="disable-ipv6-dns">disable-ipv6-dns</h2>
+<p>Disable IPV6 for nginx DNS resolver. <em><strong>default:</strong></em> <code>false</code>; IPv6 resolving enabled.</p>
+<h2 id="enable-underscores-in-headers">enable-underscores-in-headers</h2>
+<p>Enables underscores in header names. <em><strong>default:</strong></em> is disabled</p>
+<h2 id="enable-ocsp">enable-ocsp</h2>
+<p>Enables <a href="https://en.wikipedia.org/wiki/OCSP_stapling" target="_blank">Online Certificate Status Protocol stapling</a> (OCSP) support.
+<em><strong>default:</strong></em> is disabled</p>
+<h2 id="ignore-invalid-headers">ignore-invalid-headers</h2>
+<p>Set if header fields with invalid names should be ignored.
+<em><strong>default:</strong></em> is enabled</p>
+<h2 id="retry-non-idempotent">retry-non-idempotent</h2>
+<p>Since 1.9.13 NGINX will not retry non-idempotent requests (POST, LOCK, PATCH) in case of an error in the upstream server. The previous behavior can be restored using the value &quot;true&quot;.</p>
+<h2 id="error-log-level">error-log-level</h2>
+<p>Configures the logging level of errors. Log levels above are listed in the order of increasing severity.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/ngx_core_module.html#error_log" target="_blank">http://nginx.org/en/docs/ngx_core_module.html#error_log</a></p>
+<h2 id="http2-max-field-size">http2-max-field-size</h2>
+<p>Limits the maximum size of an HPACK-compressed request header field.</p>
+<p><em>References:</em>
+<a href="https://nginx.org/en/docs/http/ngx_http_v2_module.html#http2_max_field_size" target="_blank">https://nginx.org/en/docs/http/ngx_http_v2_module.html#http2_max_field_size</a></p>
+<h2 id="http2-max-header-size">http2-max-header-size</h2>
+<p>Limits the maximum size of the entire request header list after HPACK decompression.</p>
+<p><em>References:</em>
+<a href="https://nginx.org/en/docs/http/ngx_http_v2_module.html#http2_max_header_size" target="_blank">https://nginx.org/en/docs/http/ngx_http_v2_module.html#http2_max_header_size</a></p>
+<h2 id="http2-max-requests">http2-max-requests</h2>
+<p>Sets the maximum number of requests (including push requests) that can be served through one HTTP/2 connection, after which the next client request will lead to connection closing and the need of establishing a new connection.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_v2_module.html#http2_max_requests" target="_blank">http://nginx.org/en/docs/http/ngx_http_v2_module.html#http2_max_requests</a></p>
+<h2 id="http2-max-concurrent-streams">http2-max-concurrent-streams</h2>
+<p>Sets the maximum number of concurrent HTTP/2 streams in a connection.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_v2_module.html#http2_max_concurrent_streams" target="_blank">http://nginx.org/en/docs/http/ngx_http_v2_module.html#http2_max_concurrent_streams</a></p>
+<h2 id="hsts">hsts</h2>
+<p>Enables or disables the header HSTS in servers running SSL.
+HTTP Strict Transport Security (often abbreviated as HSTS) is a security feature (HTTP header) that tell browsers that it should only be communicated with using HTTPS, instead of using HTTP. It provides protection against protocol downgrade attacks and cookie theft.</p>
+<p><em>References:</em></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security</a></li>
+<li><a href="https://blog.qualys.com/securitylabs/2016/03/28/the-importance-of-a-proper-http-strict-transport-security-implementation-on-your-web-server" target="_blank">https://blog.qualys.com/securitylabs/2016/03/28/the-importance-of-a-proper-http-strict-transport-security-implementation-on-your-web-server</a></li>
+</ul>
+<h2 id="hsts-include-subdomains">hsts-include-subdomains</h2>
+<p>Enables or disables the use of HSTS in all the subdomains of the server-name.</p>
+<h2 id="hsts-max-age">hsts-max-age</h2>
+<p>Sets the time, in seconds, that the browser should remember that this site is only to be accessed using HTTPS.</p>
+<h2 id="hsts-preload">hsts-preload</h2>
+<p>Enables or disables the preload attribute in the HSTS feature (when it is enabled) dd</p>
+<h2 id="keep-alive">keep-alive</h2>
+<p>Sets the time during which a keep-alive client connection will stay open on the server side. The zero value disables keep-alive client connections.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#keepalive_timeout" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#keepalive_timeout</a></p>
+<h2 id="keep-alive-requests">keep-alive-requests</h2>
+<p>Sets the maximum number of requests that can be served through one keep-alive connection.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#keepalive_requests" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#keepalive_requests</a></p>
+<h2 id="large-client-header-buffers">large-client-header-buffers</h2>
+<p>Sets the maximum number and size of buffers used for reading large client request header. <em><strong>default:</strong></em> 4 8k</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#large_client_header_buffers" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#large_client_header_buffers</a></p>
+<h2 id="log-format-escape-json">log-format-escape-json</h2>
+<p>Sets if the escape parameter allows JSON (&quot;true&quot;) or default characters escaping in variables (&quot;false&quot;) Sets the nginx <a href="http://nginx.org/en/docs/http/ngx_http_log_module.html#log_format" target="_blank">log format</a>.</p>
+<h2 id="log-format-upstream">log-format-upstream</h2>
+<p>Sets the nginx <a href="http://nginx.org/en/docs/http/ngx_http_log_module.html#log_format" target="_blank">log format</a>.
+Example for json output:</p>
+<pre class="language-"><code class="lang-json">
+log-format-upstream<span class="token operator">:</span> &apos;<span class="token punctuation">{</span><span class="token property">&quot;time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$time_iso8601&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;remote_addr&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$proxy_protocol_addr&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;x_forward_for&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$proxy_add_x_forwarded_for&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;request_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$req_id&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;remote_user&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$remote_user&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;bytes_sent&quot;</span><span class="token operator">:</span> $bytes_sent<span class="token punctuation">,</span> <span class="token property">&quot;request_time&quot;</span><span class="token operator">:</span> $request_time<span class="token punctuation">,</span> <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> $status<span class="token punctuation">,</span> <span class="token property">&quot;vhost&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$host&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;request_proto&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$server_protocol&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$uri&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;request_query&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$args&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;request_length&quot;</span><span class="token operator">:</span> $request_length<span class="token punctuation">,</span> <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> $request_time<span class="token punctuation">,</span><span class="token property">&quot;method&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$request_method&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;http_referrer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$http_referer&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;http_user_agent&quot;</span><span class="token operator">:</span> <span class="token string">&quot;$http_user_agent&quot;</span> <span class="token punctuation">}</span>&apos;
+</code></pre>
+<p>Please check the <a href="log-format.html">log-format</a> for definition of each field.</p>
+<h2 id="log-format-stream">log-format-stream</h2>
+<p>Sets the nginx <a href="https://nginx.org/en/docs/stream/ngx_stream_log_module.html#log_format" target="_blank">stream format</a>.</p>
+<h2 id="enable-multi-accept">enable-multi-accept</h2>
+<p>If disabled, a worker process will accept one new connection at a time. Otherwise, a worker process will accept all new connections at a time.
+<em><strong>default:</strong></em> true</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/ngx_core_module.html#multi_accept" target="_blank">http://nginx.org/en/docs/ngx_core_module.html#multi_accept</a></p>
+<h2 id="max-worker-connections">max-worker-connections</h2>
+<p>Sets the <a href="http://nginx.org/en/docs/ngx_core_module.html#worker_connections" target="_blank">maximum number of simultaneous connections</a> that can be opened by each worker process.
+0 will use the value of <a href="#max-worker-open-files">max-worker-open-files</a>.
+<em><strong>default:</strong></em> 16384</p>
+<p>!!! tip
+    Using 0 in scenarios of high load improves performance at the cost of increasing RAM utilization (even on idle).</p>
+<h2 id="max-worker-open-files">max-worker-open-files</h2>
+<p>Sets the <a href="http://nginx.org/en/docs/ngx_core_module.html#worker_rlimit_nofile" target="_blank">maximum number of files</a> that can be opened by each worker process.
+The default of 0 means &quot;max open files (system&apos;s limit) / <a href="#worker-processes">worker-processes</a> - 1024&quot;.
+<em><strong>default:</strong></em> 0</p>
+<h2 id="map-hash-bucket-size">map-hash-bucket-size</h2>
+<p>Sets the bucket size for the <a href="http://nginx.org/en/docs/http/ngx_http_map_module.html#map_hash_bucket_size" target="_blank">map variables hash tables</a>. The details of setting up hash tables are provided in a separate <a href="http://nginx.org/en/docs/hash.html" target="_blank">document</a>.</p>
+<h2 id="proxy-real-ip-cidr">proxy-real-ip-cidr</h2>
+<p>If <code>use-forwarded-headers</code> or <code>use-proxy-protocol</code> is enabled, <code>proxy-real-ip-cidr</code> defines the default IP/network address of your external load balancer. Can be a comma-separated list of CIDR blocks.
+<em><strong>default:</strong></em> &quot;0.0.0.0/0&quot;</p>
+<h2 id="proxy-set-headers">proxy-set-headers</h2>
+<p>Sets custom headers from named configmap before sending traffic to backends. The value format is namespace/name.  See <a href="https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/customization/custom-headers" target="_blank">example</a></p>
+<h2 id="server-name-hash-max-size">server-name-hash-max-size</h2>
+<p>Sets the maximum size of the <a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#server_names_hash_max_size" target="_blank">server names hash tables</a> used in server names,map directive&#x2019;s values, MIME types, names of request header strings, etc.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/hash.html" target="_blank">http://nginx.org/en/docs/hash.html</a></p>
+<h2 id="server-name-hash-bucket-size">server-name-hash-bucket-size</h2>
+<p>Sets the size of the bucket for the server names hash tables.</p>
+<p><em>References:</em></p>
+<ul>
+<li><a href="http://nginx.org/en/docs/hash.html" target="_blank">http://nginx.org/en/docs/hash.html</a></li>
+<li><a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#server_names_hash_bucket_size" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#server_names_hash_bucket_size</a></li>
+</ul>
+<h2 id="proxy-headers-hash-max-size">proxy-headers-hash-max-size</h2>
+<p>Sets the maximum size of the proxy headers hash tables.</p>
+<p><em>References:</em></p>
+<ul>
+<li><a href="http://nginx.org/en/docs/hash.html" target="_blank">http://nginx.org/en/docs/hash.html</a></li>
+<li><a href="https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_headers_hash_max_size" target="_blank">https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_headers_hash_max_size</a></li>
+</ul>
+<h2 id="reuse-port">reuse-port</h2>
+<p>Instructs NGINX to create an individual listening socket for each worker process (using the SO<em>REUSEPORT socket option), allowing a kernel to distribute incoming connections between worker processes
+</em><strong>default:</strong>_ true</p>
+<h2 id="proxy-headers-hash-bucket-size">proxy-headers-hash-bucket-size</h2>
+<p>Sets the size of the bucket for the proxy headers hash tables.</p>
+<p><em>References:</em></p>
+<ul>
+<li><a href="http://nginx.org/en/docs/hash.html" target="_blank">http://nginx.org/en/docs/hash.html</a></li>
+<li><a href="https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_headers_hash_bucket_size" target="_blank">https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_headers_hash_bucket_size</a></li>
+</ul>
+<h2 id="plugins">plugins</h2>
+<p>Activates plugins installed in <code>/etc/nginx/lua/plugins</code>. Refer to <a href="https://github.com/kubernetes/ingress-nginx/blob/master/rootfs/etc/nginx/lua/plugins/README.md" target="_blank">ingress-nginx plugins README</a> for more information on how to write and install a plugin.</p>
+<h2 id="server-tokens">server-tokens</h2>
+<p>Send NGINX Server header in responses and display NGINX version in error pages. <em><strong>default:</strong></em> is disabled</p>
+<h2 id="ssl-ciphers">ssl-ciphers</h2>
+<p>Sets the <a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_ciphers" target="_blank">ciphers</a> list to enable. The ciphers are specified in the format understood by the OpenSSL library.</p>
+<p>The default cipher list is:
+ <code>ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384</code>.</p>
+<p>The ordering of a ciphersuite is very important because it decides which algorithms are going to be selected in priority. The recommendation above prioritizes algorithms that provide perfect <a href="https://wiki.mozilla.org/Security/Server_Side_TLS#Forward_Secrecy" target="_blank">forward secrecy</a>.</p>
+<p>DHE-based cyphers will not be available until DH parameter is configured <a href="https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/customization/ssl-dh-param" target="_blank">Custom DH parameters for perfect forward secrecy</a></p>
+<p>Please check the <a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/" target="_blank">Mozilla SSL Configuration Generator</a>.</p>
+<p><strong>Note:</strong> ssl_prefer_server_ciphers directive will be enabled by default for http context.</p>
+<h2 id="ssl-ecdh-curve">ssl-ecdh-curve</h2>
+<p>Specifies a curve for ECDHE ciphers.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_ecdh_curve" target="_blank">http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_ecdh_curve</a></p>
+<h2 id="ssl-dh-param">ssl-dh-param</h2>
+<p>Sets the name of the secret that contains Diffie-Hellman key to help with &quot;Perfect Forward Secrecy&quot;.</p>
+<p><em>References:</em></p>
+<ul>
+<li><a href="https://wiki.openssl.org/index.php/Diffie-Hellman_parameters" target="_blank">https://wiki.openssl.org/index.php/Diffie-Hellman_parameters</a></li>
+<li><a href="https://wiki.mozilla.org/Security/Server_Side_TLS#DHE_handshake_and_dhparam" target="_blank">https://wiki.mozilla.org/Security/Server_Side_TLS#DHE_handshake_and_dhparam</a></li>
+<li><a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_dhparam" target="_blank">http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_dhparam</a></li>
+</ul>
+<h2 id="ssl-protocols">ssl-protocols</h2>
+<p>Sets the <a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_protocols" target="_blank">SSL protocols</a> to use. The default is: <code>TLSv1.2 TLSv1.3</code>.</p>
+<p>Please check the result of the configuration using <code>https://ssllabs.com/ssltest/analyze.html</code> or <code>https://testssl.sh</code>.</p>
+<h2 id="ssl-early-data">ssl-early-data</h2>
+<p>Enables or disables TLS 1.3 <a href="https://tools.ietf.org/html/rfc8446#section-2.3" target="_blank">early data</a>, also known as Zero Round Trip
+Time Resumption (0-RTT).</p>
+<p>This requires <code>ssl-protocols</code> to have <code>TLSv1.3</code> enabled. Enable this with caution, because requests sent within early
+data are subject to <a href="https://tools.ietf.org/html/rfc8470" target="_blank">replay attacks</a>.</p>
+<p><a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_early_data" target="_blank">ssl_early_data</a>. The default is: <code>false</code>.</p>
+<h2 id="ssl-session-cache">ssl-session-cache</h2>
+<p>Enables or disables the use of shared <a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_cache" target="_blank">SSL cache</a> among worker processes.</p>
+<h2 id="ssl-session-cache-size">ssl-session-cache-size</h2>
+<p>Sets the size of the <a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_cache" target="_blank">SSL shared session cache</a> between all worker processes.</p>
+<h2 id="ssl-session-tickets">ssl-session-tickets</h2>
+<p>Enables or disables session resumption through <a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_tickets" target="_blank">TLS session tickets</a>.</p>
+<h2 id="ssl-session-ticket-key">ssl-session-ticket-key</h2>
+<p>Sets the secret key used to encrypt and decrypt TLS session tickets. The value must be a valid base64 string.
+To create a ticket: <code>openssl rand 80 | openssl enc -A -base64</code></p>
+<p><a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_tickets" target="_blank">TLS session ticket-key</a>, by default, a randomly generated key is used.</p>
+<h2 id="ssl-session-timeout">ssl-session-timeout</h2>
+<p>Sets the time during which a client may <a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_timeout" target="_blank">reuse the session</a> parameters stored in a cache.</p>
+<h2 id="ssl-buffer-size">ssl-buffer-size</h2>
+<p>Sets the size of the <a href="http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_buffer_size" target="_blank">SSL buffer</a> used for sending data. The default of 4k helps NGINX to improve TLS Time To First Byte (TTTFB).</p>
+<p><em>References:</em>
+<a href="https://www.igvita.com/2013/12/16/optimizing-nginx-tls-time-to-first-byte/" target="_blank">https://www.igvita.com/2013/12/16/optimizing-nginx-tls-time-to-first-byte/</a></p>
+<h2 id="use-proxy-protocol">use-proxy-protocol</h2>
+<p>Enables or disables the <a href="https://www.nginx.com/resources/admin-guide/proxy-protocol/" target="_blank">PROXY protocol</a> to receive client connection (real IP address) information passed through proxy servers and load balancers such as HAProxy and Amazon Elastic Load Balancer (ELB).</p>
+<h2 id="proxy-protocol-header-timeout">proxy-protocol-header-timeout</h2>
+<p>Sets the timeout value for receiving the proxy-protocol headers. The default of 5 seconds prevents the TLS passthrough handler from waiting indefinitely on a dropped connection.
+<em><strong>default:</strong></em> 5s</p>
+<h2 id="use-gzip">use-gzip</h2>
+<p>Enables or disables compression of HTTP responses using the <a href="http://nginx.org/en/docs/http/ngx_http_gzip_module.html" target="_blank">&quot;gzip&quot; module</a>. MIME types to compress are controlled by <a href="#gzip-types">gzip-types</a>. <em><strong>default:</strong></em> false</p>
+<h2 id="use-geoip">use-geoip</h2>
+<p>Enables or disables <a href="http://nginx.org/en/docs/http/ngx_http_geoip_module.html" target="_blank">&quot;geoip&quot; module</a> that creates variables with values depending on the client IP address, using the precompiled MaxMind databases.
+<em><strong>default:</strong></em> true</p>
+<blockquote>
+<p><strong>Note:</strong> MaxMind legacy databases are discontinued and will not receive updates after 2019-01-02, cf. <a href="https://support.maxmind.com/geolite-legacy-discontinuation-notice/" target="_blank">discontinuation notice</a>. Consider <a href="#use-geoip2">use-geoip2</a> below.</p>
+</blockquote>
+<h2 id="use-geoip2">use-geoip2</h2>
+<p>Enables the <a href="https://github.com/leev/ngx_http_geoip2_module" target="_blank">geoip2 module</a> for NGINX.
+Since <code>0.27.0</code> and due to a <a href="https://blog.maxmind.com/2019/12/18/significant-changes-to-accessing-and-using-geolite2-databases" target="_blank">change in the MaxMind databases</a> a license is required to have access to the databases.
+For this reason, it is required to define a new flag <code>--maxmind-license-key</code> in the ingress controller deployment to download the databases needed during the initialization of the ingress controller.
+Alternatively, it is possible to use a volume to mount the files <code>/etc/nginx/geoip/GeoLite2-City.mmdb</code> and <code>/etc/nginx/geoip/GeoLite2-ASN.mmdb</code>, avoiding the overhead of the download.</p>
+<p>!!! important
+    If the feature is enabled but the files are missing, GeoIP2 will not be enabled.</p>
+<p><em><strong>default:</strong></em> false</p>
+<h2 id="enable-brotli">enable-brotli</h2>
+<p>Enables or disables compression of HTTP responses using the <a href="https://github.com/google/ngx_brotli" target="_blank">&quot;brotli&quot; module</a>.
+The default mime type list to compress is: <code>application/xml+rss application/atom+xml application/javascript application/x-javascript application/json application/rss+xml application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/svg+xml image/x-icon text/css text/plain text/x-component</code>. <em><strong>default:</strong></em> is disabled</p>
+<blockquote>
+<p><strong>Note:</strong> Brotli does not works in Safari &lt; 11. For more information see <a href="https://caniuse.com/#feat=brotli" target="_blank">https://caniuse.com/#feat=brotli</a></p>
+</blockquote>
+<h2 id="brotli-level">brotli-level</h2>
+<p>Sets the Brotli Compression Level that will be used. <em><strong>default:</strong></em> 4</p>
+<h2 id="brotli-types">brotli-types</h2>
+<p>Sets the MIME Types that will be compressed on-the-fly by brotli.
+<em><strong>default:</strong></em> <code>application/xml+rss application/atom+xml application/javascript application/x-javascript application/json application/rss+xml application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/svg+xml image/x-icon text/css text/plain text/x-component</code></p>
+<h2 id="use-http2">use-http2</h2>
+<p>Enables or disables <a href="http://nginx.org/en/docs/http/ngx_http_v2_module.html" target="_blank">HTTP/2</a> support in secure connections.</p>
+<h2 id="gzip-level">gzip-level</h2>
+<p>Sets the gzip Compression Level that will be used. <em><strong>default:</strong></em> 1</p>
+<h2 id="gzip-min-length">gzip-min-length</h2>
+<p>Minimum length of responses to be returned to the client before it is eligible for gzip compression, in bytes. <em><strong>default:</strong></em> 256</p>
+<h2 id="gzip-types">gzip-types</h2>
+<p>Sets the MIME types in addition to &quot;text/html&quot; to compress. The special value &quot;*&quot; matches any MIME type. Responses with the &quot;text/html&quot; type are always compressed if <a href="#use-gzip"><code>use-gzip</code></a> is enabled.
+<em><strong>default:</strong></em> <code>application/atom+xml application/javascript application/x-javascript application/json application/rss+xml application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/svg+xml image/x-icon text/css text/plain text/x-component</code>.</p>
+<h2 id="worker-processes">worker-processes</h2>
+<p>Sets the number of <a href="http://nginx.org/en/docs/ngx_core_module.html#worker_processes" target="_blank">worker processes</a>.
+The default of &quot;auto&quot; means number of available CPU cores.</p>
+<h2 id="worker-cpu-affinity">worker-cpu-affinity</h2>
+<p>Binds worker processes to the sets of CPUs. <a href="http://nginx.org/en/docs/ngx_core_module.html#worker_cpu_affinity" target="_blank">worker_cpu_affinity</a>.
+By default worker processes are not bound to any specific CPUs. The value can be:</p>
+<ul>
+<li>&quot;&quot;: empty string indicate no affinity is applied.</li>
+<li>cpumask: e.g. <code>0001 0010 0100 1000</code> to bind processes to specific cpus.</li>
+<li>auto: binding worker processes automatically to available CPUs.</li>
+</ul>
+<h2 id="worker-shutdown-timeout">worker-shutdown-timeout</h2>
+<p>Sets a timeout for Nginx to <a href="http://nginx.org/en/docs/ngx_core_module.html#worker_shutdown_timeout" target="_blank">wait for worker to gracefully shutdown</a>. <em><strong>default:</strong></em> &quot;240s&quot;</p>
+<h2 id="load-balance">load-balance</h2>
+<p>Sets the algorithm to use for load balancing.
+The value can either be:</p>
+<ul>
+<li>round_robin: to use the default round robin loadbalancer</li>
+<li>ewma: to use the Peak EWMA method for routing (<a href="https://github.com/kubernetes/ingress-nginx/blob/master/rootfs/etc/nginx/lua/balancer/ewma.lua" target="_blank">implementation</a>)</li>
+</ul>
+<p>The default is <code>round_robin</code>.</p>
+<ul>
+<li>To load balance using consistent hashing of IP or other variables, consider the <code>nginx.ingress.kubernetes.io/upstream-hash-by</code> annotation.</li>
+<li>To load balance using session cookies, consider the <code>nginx.ingress.kubernetes.io/affinity</code> annotation.</li>
+</ul>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/load_balancing.html" target="_blank">http://nginx.org/en/docs/http/load_balancing.html</a></p>
+<h2 id="variables-hash-bucket-size">variables-hash-bucket-size</h2>
+<p>Sets the bucket size for the variables hash table.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_map_module.html#variables_hash_bucket_size" target="_blank">http://nginx.org/en/docs/http/ngx_http_map_module.html#variables_hash_bucket_size</a></p>
+<h2 id="variables-hash-max-size">variables-hash-max-size</h2>
+<p>Sets the maximum size of the variables hash table.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_map_module.html#variables_hash_max_size" target="_blank">http://nginx.org/en/docs/http/ngx_http_map_module.html#variables_hash_max_size</a></p>
+<h2 id="upstream-keepalive-connections">upstream-keepalive-connections</h2>
+<p>Activates the cache for connections to upstream servers. The connections parameter sets the maximum number of idle
+keepalive connections to upstream servers that are preserved in the cache of each worker process. When this number is
+exceeded, the least recently used connections are closed.
+<em><strong>default:</strong></em> 320</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive" target="_blank">http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive</a></p>
+<h2 id="upstream-keepalive-timeout">upstream-keepalive-timeout</h2>
+<p>Sets a timeout during which an idle keepalive connection to an upstream server will stay open.
+ <em><strong>default:</strong></em> 60</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_timeout" target="_blank">http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_timeout</a></p>
+<h2 id="upstream-keepalive-requests">upstream-keepalive-requests</h2>
+<p>Sets the maximum number of requests that can be served through one keepalive connection. After the maximum number of
+requests is made, the connection is closed.
+<em><strong>default:</strong></em> 10000</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_requests" target="_blank">http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_requests</a></p>
+<h2 id="limit-conn-zone-variable">limit-conn-zone-variable</h2>
+<p>Sets parameters for a shared memory zone that will keep states for various keys of <a href="http://nginx.org/en/docs/http/ngx_http_limit_conn_module.html#limit_conn_zone" target="_blank">limit_conn_zone</a>. The default of &quot;$binary_remote_addr&quot; variable&#x2019;s size is always 4 bytes for IPv4 addresses or 16 bytes for IPv6 addresses.</p>
+<h2 id="proxy-stream-timeout">proxy-stream-timeout</h2>
+<p>Sets the timeout between two successive read or write operations on client or proxied server connections. If no data is transmitted within this time, the connection is closed.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_timeout" target="_blank">http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_timeout</a></p>
+<h2 id="proxy-stream-next-upstream">proxy-stream-next-upstream</h2>
+<p>When a connection to the proxied server cannot be established, determines whether a client connection will be passed to the next server.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_next_upstream" target="_blank">http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_next_upstream</a></p>
+<h2 id="proxy-stream-next-upstream-timeout">proxy-stream-next-upstream-timeout</h2>
+<p>Limits the time allowed to pass a connection to the next server. The 0 value turns off this limitation.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_next_upstream_timeout" target="_blank">http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_next_upstream_timeout</a></p>
+<h2 id="proxy-stream-next-upstream-tries">proxy-stream-next-upstream-tries</h2>
+<p>Limits the number of possible tries a request should be passed to the next server. The 0 value turns off this limitation.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_next_upstream_timeout" target="_blank">http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_next_upstream_tries</a></p>
+<h2 id="proxy-stream-responses">proxy-stream-responses</h2>
+<p>Sets the number of datagrams expected from the proxied server in response to the client request if the UDP protocol is used.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_responses" target="_blank">http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html#proxy_responses</a></p>
+<h2 id="bind-address">bind-address</h2>
+<p>Sets the addresses on which the server will accept requests instead of *. It should be noted that these addresses must exist in the runtime environment or the controller will crash loop.</p>
+<h2 id="use-forwarded-headers">use-forwarded-headers</h2>
+<p>If true, NGINX passes the incoming <code>X-Forwarded-*</code> headers to upstreams. Use this option when NGINX is behind another L7 proxy / load balancer that is setting these headers.</p>
+<p>If false, NGINX ignores incoming <code>X-Forwarded-*</code> headers, filling them with the request information it sees. Use this option if NGINX is exposed directly to the internet, or it&apos;s behind a L3/packet-based load balancer that doesn&apos;t alter the source IP in the packets.</p>
+<h2 id="enable-real-ip">enable-real-ip</h2>
+<p><code>enable-real-ip</code> enables the configuration of <a href="http://nginx.org/en/docs/http/ngx_http_realip_module.html" target="_blank">http://nginx.org/en/docs/http/ngx_http_realip_module.html</a>. Specific attributes of the module can be configured further by using <code>forwarded-for-header</code> and <code>proxy-real-ip-cidr</code> settings.</p>
+<h2 id="forwarded-for-header">forwarded-for-header</h2>
+<p>Sets the header field for identifying the originating IP address of a client. <em><strong>default:</strong></em> X-Forwarded-For</p>
+<h2 id="compute-full-forwarded-for">compute-full-forwarded-for</h2>
+<p>Append the remote address to the X-Forwarded-For header instead of replacing it. When this option is enabled, the upstream application is responsible for extracting the client IP based on its own list of trusted proxies.</p>
+<h2 id="proxy-add-original-uri-header">proxy-add-original-uri-header</h2>
+<p>Adds an X-Original-Uri header with the original request URI to the backend request</p>
+<h2 id="generate-request-id">generate-request-id</h2>
+<p>Ensures that X-Request-ID is defaulted to a random value, if no X-Request-ID is present in the request</p>
+<h2 id="enable-opentracing">enable-opentracing</h2>
+<p>Enables the nginx Opentracing extension. <em><strong>default:</strong></em> is disabled</p>
+<p><em>References:</em>
+<a href="https://github.com/opentracing-contrib/nginx-opentracing" target="_blank">https://github.com/opentracing-contrib/nginx-opentracing</a></p>
+<h2 id="opentracing-operation-name">opentracing-operation-name</h2>
+<p>Specifies a custom name for the server span. <em><strong>default:</strong></em> is empty</p>
+<p>For example, set to &quot;HTTP $request_method $uri&quot;.</p>
+<h2 id="opentracing-location-operation-name">opentracing-location-operation-name</h2>
+<p>Specifies a custom name for the location span. <em><strong>default:</strong></em> is empty</p>
+<p>For example, set to &quot;HTTP $request_method $uri&quot;.</p>
+<h2 id="zipkin-collector-host">zipkin-collector-host</h2>
+<p>Specifies the host to use when uploading traces. It must be a valid URL.</p>
+<h2 id="zipkin-collector-port">zipkin-collector-port</h2>
+<p>Specifies the port to use when uploading traces. <em><strong>default:</strong></em> 9411</p>
+<h2 id="zipkin-service-name">zipkin-service-name</h2>
+<p>Specifies the service name to use for any traces created. <em><strong>default:</strong></em> nginx</p>
+<h2 id="zipkin-sample-rate">zipkin-sample-rate</h2>
+<p>Specifies sample rate for any traces created. <em><strong>default:</strong></em> 1.0</p>
+<h2 id="jaeger-collector-host">jaeger-collector-host</h2>
+<p>Specifies the host to use when uploading traces. It must be a valid URL.</p>
+<h2 id="jaeger-collector-port">jaeger-collector-port</h2>
+<p>Specifies the port to use when uploading traces. <em><strong>default:</strong></em> 6831</p>
+<h2 id="jaeger-endpoint">jaeger-endpoint</h2>
+<p>Specifies the endpoint to use when uploading traces to a collector. This takes priority over <code>jaeger-collector-host</code> if both are specified.</p>
+<h2 id="jaeger-service-name">jaeger-service-name</h2>
+<p>Specifies the service name to use for any traces created. <em><strong>default:</strong></em> nginx</p>
+<h2 id="jaeger-propagation-format">jaeger-propagation-format</h2>
+<p>Specifies the traceparent/tracestate propagation format. <em><strong>default:</strong></em> jaeger</p>
+<h2 id="jaeger-sampler-type">jaeger-sampler-type</h2>
+<p>Specifies the sampler to be used when sampling traces. The available samplers are: const, probabilistic, ratelimiting, remote. <em><strong>default:</strong></em> const</p>
+<h2 id="jaeger-sampler-param">jaeger-sampler-param</h2>
+<p>Specifies the argument to be passed to the sampler constructor. Must be a number.
+For const this should be 0 to never sample and 1 to always sample. <em><strong>default:</strong></em> 1</p>
+<h2 id="jaeger-sampler-host">jaeger-sampler-host</h2>
+<p>Specifies the custom remote sampler host to be passed to the sampler constructor. Must be a valid URL.
+Leave blank to use default value (localhost). <em><strong>default:</strong></em> <a href="http://127.0.0.1" target="_blank">http://127.0.0.1</a></p>
+<h2 id="jaeger-sampler-port">jaeger-sampler-port</h2>
+<p>Specifies the custom remote sampler port to be passed to the sampler constructor. Must be a number. <em><strong>default:</strong></em> 5778</p>
+<h2 id="jaeger-trace-context-header-name">jaeger-trace-context-header-name</h2>
+<p>Specifies the header name used for passing trace context. <em><strong>default:</strong></em> uber-trace-id</p>
+<h2 id="jaeger-debug-header">jaeger-debug-header</h2>
+<p>Specifies the header name used for force sampling. <em><strong>default:</strong></em> jaeger-debug-id</p>
+<h2 id="jaeger-baggage-header">jaeger-baggage-header</h2>
+<p>Specifies the header name used to submit baggage if there is no root span. <em><strong>default:</strong></em> jaeger-baggage</p>
+<h2 id="jaeger-tracer-baggage-header-prefix">jaeger-tracer-baggage-header-prefix</h2>
+<p>Specifies the header prefix used to propagate baggage. <em><strong>default:</strong></em> uberctx-</p>
+<h2 id="datadog-collector-host">datadog-collector-host</h2>
+<p>Specifies the datadog agent host to use when uploading traces. It must be a valid URL.</p>
+<h2 id="datadog-collector-port">datadog-collector-port</h2>
+<p>Specifies the port to use when uploading traces. <em><strong>default:</strong></em> 8126</p>
+<h2 id="datadog-service-name">datadog-service-name</h2>
+<p>Specifies the service name to use for any traces created. <em><strong>default:</strong></em> nginx</p>
+<h2 id="datadog-environment">datadog-environment</h2>
+<p>Specifies the environment this trace belongs to. <em><strong>default:</strong></em> prod</p>
+<h2 id="datadog-operation-name-override">datadog-operation-name-override</h2>
+<p>Overrides the operation naem to use for any traces crated. <em><strong>default:</strong></em> nginx.handle</p>
+<h2 id="datadog-priority-sampling">datadog-priority-sampling</h2>
+<p>Specifies to use client-side sampling.
+If true disables client-side sampling (thus ignoring <code>sample_rate</code>) and enables distributed priority sampling, where traces are sampled based on a combination of user-assigned priorities and configuration from the agent. <em><strong>default:</strong></em> true</p>
+<h2 id="datadog-sample-rate">datadog-sample-rate</h2>
+<p>Specifies sample rate for any traces created.
+This is effective only when <code>datadog-priority-sampling</code> is <code>false</code> <em><strong>default:</strong></em> 1.0</p>
+<h2 id="main-snippet">main-snippet</h2>
+<p>Adds custom configuration to the main section of the nginx configuration.</p>
+<h2 id="http-snippet">http-snippet</h2>
+<p>Adds custom configuration to the http section of the nginx configuration.</p>
+<h2 id="server-snippet">server-snippet</h2>
+<p>Adds custom configuration to all the servers in the nginx configuration.</p>
+<h2 id="location-snippet">location-snippet</h2>
+<p>Adds custom configuration to all the locations in the nginx configuration.</p>
+<p>You can not use this to add new locations that proxy to the Kubernetes pods, as the snippet does not have access to the Go template functions. If you want to add custom locations you will have to <a href="https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/custom-template/" target="_blank">provide your own nginx.tmpl</a>.</p>
+<h2 id="custom-http-errors">custom-http-errors</h2>
+<p>Enables which HTTP codes should be passed for processing with the <a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#error_page" target="_blank">error_page directive</a></p>
+<p>Setting at least one code also enables <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_intercept_errors" target="_blank">proxy_intercept_errors</a> which are required to process error_page.</p>
+<p>Example usage: <code>custom-http-errors: 404,415</code></p>
+<h2 id="proxy-body-size">proxy-body-size</h2>
+<p>Sets the maximum allowed size of the client request body.
+See NGINX <a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size" target="_blank">client_max_body_size</a>.</p>
+<h2 id="proxy-connect-timeout">proxy-connect-timeout</h2>
+<p>Sets the timeout for <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_connect_timeout" target="_blank">establishing a connection with a proxied server</a>. It should be noted that this timeout cannot usually exceed 75 seconds.</p>
+<h2 id="proxy-read-timeout">proxy-read-timeout</h2>
+<p>Sets the timeout in seconds for <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_read_timeout" target="_blank">reading a response from the proxied server</a>. The timeout is set only between two successive read operations, not for the transmission of the whole response.</p>
+<h2 id="proxy-send-timeout">proxy-send-timeout</h2>
+<p>Sets the timeout in seconds for <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_send_timeout" target="_blank">transmitting a request to the proxied server</a>. The timeout is set only between two successive write operations, not for the transmission of the whole request.</p>
+<h2 id="proxy-buffers-number">proxy-buffers-number</h2>
+<p>Sets the number of the buffer used for <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_buffers" target="_blank">reading the first part of the response</a> received from the proxied server. This part usually contains a small response header.</p>
+<h2 id="proxy-buffer-size">proxy-buffer-size</h2>
+<p>Sets the size of the buffer used for <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_buffer_size" target="_blank">reading the first part of the response</a> received from the proxied server. This part usually contains a small response header.</p>
+<h2 id="proxy-cookie-path">proxy-cookie-path</h2>
+<p>Sets a text that <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cookie_path" target="_blank">should be changed in the path attribute</a> of the &#x201C;Set-Cookie&#x201D; header fields of a proxied server response.</p>
+<h2 id="proxy-cookie-domain">proxy-cookie-domain</h2>
+<p>Sets a text that <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cookie_domain" target="_blank">should be changed in the domain attribute</a> of the &#x201C;Set-Cookie&#x201D; header fields of a proxied server response.</p>
+<h2 id="proxy-next-upstream">proxy-next-upstream</h2>
+<p>Specifies in <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_next_upstream" target="_blank">which cases</a> a request should be passed to the next server.</p>
+<h2 id="proxy-next-upstream-timeout">proxy-next-upstream-timeout</h2>
+<p><a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_next_upstream_timeout" target="_blank">Limits the time</a> in seconds during which a request can be passed to the next server.</p>
+<h2 id="proxy-next-upstream-tries">proxy-next-upstream-tries</h2>
+<p>Limit the number of <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_next_upstream_tries" target="_blank">possible tries</a> a request should be passed to the next server.</p>
+<h2 id="proxy-redirect-from">proxy-redirect-from</h2>
+<p>Sets the original text that should be changed in the &quot;Location&quot; and &quot;Refresh&quot; header fields of a proxied server response. <em><strong>default:</strong></em> off</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_redirect" target="_blank">http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_redirect</a></p>
+<h2 id="proxy-request-buffering">proxy-request-buffering</h2>
+<p>Enables or disables <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_request_buffering" target="_blank">buffering of a client request body</a>.</p>
+<h2 id="ssl-redirect">ssl-redirect</h2>
+<p>Sets the global value of redirects (301) to HTTPS if the server has a TLS certificate (defined in an Ingress rule).
+<em><strong>default:</strong></em> &quot;true&quot;</p>
+<h2 id="whitelist-source-range">whitelist-source-range</h2>
+<p>Sets the default whitelisted IPs for each <code>server</code> block. This can be overwritten by an annotation on an Ingress rule.
+See <a href="http://nginx.org/en/docs/http/ngx_http_access_module.html" target="_blank">ngx_http_access_module</a>.</p>
+<h2 id="skip-access-log-urls">skip-access-log-urls</h2>
+<p>Sets a list of URLs that should not appear in the NGINX access log. This is useful with urls like <code>/health</code> or <code>health-check</code> that make &quot;complex&quot; reading the logs. <em><strong>default:</strong></em> is empty</p>
+<h2 id="limit-rate">limit-rate</h2>
+<p>Limits the rate of response transmission to a client. The rate is specified in bytes per second. The zero value disables rate limiting. The limit is set per a request, and so if a client simultaneously opens two connections, the overall rate will be twice as much as the specified limit.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#limit_rate" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#limit_rate</a></p>
+<h2 id="limit-rate-after">limit-rate-after</h2>
+<p>Sets the initial amount after which the further transmission of a response to a client will be rate limited.</p>
+<h2 id="lua-shared-dicts">lua-shared-dicts</h2>
+<p>Customize default Lua shared dictionaries or define more. You can use the following syntax to do so:</p>
+<pre class="language-"><code>lua-shared-dicts: &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>my</span> <span class="token attr-name">dict</span> <span class="token attr-name">name</span><span class="token punctuation">&gt;</span></span>: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>my</span> <span class="token attr-name">dict</span> <span class="token attr-name">size</span><span class="token punctuation">&gt;</span></span>, [<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>my</span> <span class="token attr-name">dict</span> <span class="token attr-name">name</span><span class="token punctuation">&gt;</span></span>: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>my</span> <span class="token attr-name">dict</span> <span class="token attr-name">size</span><span class="token punctuation">&gt;</span></span>], ...&quot;
+</code></pre><p>For example following will set default <code>certificate_data</code> dictionary to <code>100M</code> and will introduce a new dictionary called
+<code>my_custom_plugin</code>:</p>
+<pre class="language-"><code>lua-shared-dicts: &quot;certificate_data: 100, my_custom_plugin: 5&quot;
+</code></pre><p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#limit_rate_after" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#limit_rate_after</a></p>
+<h2 id="http-redirect-code">http-redirect-code</h2>
+<p>Sets the HTTP status code to be used in redirects.
+Supported codes are <a href="https://developer.mozilla.org/docs/Web/HTTP/Status/301" target="_blank">301</a>,<a href="https://developer.mozilla.org/docs/Web/HTTP/Status/302" target="_blank">302</a>,<a href="https://developer.mozilla.org/docs/Web/HTTP/Status/307" target="_blank">307</a> and <a href="https://developer.mozilla.org/docs/Web/HTTP/Status/308" target="_blank">308</a>
+<em><strong>default:</strong></em> 308</p>
+<blockquote>
+<p><strong>Why the default code is 308?</strong></p>
+<p><a href="https://tools.ietf.org/html/rfc7238" target="_blank">RFC 7238</a> was created to define the 308 (Permanent Redirect) status code that is similar to 301 (Moved Permanently) but it keeps the payload in the redirect. This is important if we send a redirect in methods like POST.</p>
+</blockquote>
+<h2 id="proxy-buffering">proxy-buffering</h2>
+<p>Enables or disables <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_buffering" target="_blank">buffering of responses from the proxied server</a>.</p>
+<h2 id="limit-req-status-code">limit-req-status-code</h2>
+<p>Sets the <a href="http://nginx.org/en/docs/http/ngx_http_limit_req_module.html#limit_req_status" target="_blank">status code to return in response to rejected requests</a>. <em><strong>default:</strong></em> 503</p>
+<h2 id="limit-conn-status-code">limit-conn-status-code</h2>
+<p>Sets the <a href="http://nginx.org/en/docs/http/ngx_http_limit_conn_module.html#limit_conn_status" target="_blank">status code to return in response to rejected connections</a>. <em><strong>default:</strong></em> 503</p>
+<h2 id="no-tls-redirect-locations">no-tls-redirect-locations</h2>
+<p>A comma-separated list of locations on which http requests will never get redirected to their https counterpart.
+<em><strong>default:</strong></em> &quot;/.well-known/acme-challenge&quot;</p>
+<h2 id="global-auth-url">global-auth-url</h2>
+<p>A url to an existing service that provides authentication for all the locations.
+Similar to the Ingress rule annotation <code>nginx.ingress.kubernetes.io/auth-url</code>.
+Locations that should not get authenticated can be listed using <code>no-auth-locations</code> See <a href="#no-auth-locations">no-auth-locations</a>. In addition, each service can be excluded from authentication via annotation <code>enable-global-auth</code> set to &quot;false&quot;.
+<em><strong>default:</strong></em> &quot;&quot;</p>
+<p><em>References:</em> <a href="https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md#external-authentication" target="_blank">https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md#external-authentication</a></p>
+<h2 id="global-auth-method">global-auth-method</h2>
+<p>A HTTP method to use for an existing service that provides authentication for all the locations.
+Similar to the Ingress rule annotation <code>nginx.ingress.kubernetes.io/auth-method</code>.
+<em><strong>default:</strong></em> &quot;&quot;</p>
+<h2 id="global-auth-signin">global-auth-signin</h2>
+<p>Sets the location of the error page for an existing service that provides authentication for all the locations.
+Similar to the Ingress rule annotation <code>nginx.ingress.kubernetes.io/auth-signin</code>.
+<em><strong>default:</strong></em> &quot;&quot;</p>
+<h2 id="global-auth-signin-redirect-param">global-auth-signin-redirect-param</h2>
+<p>Sets the query parameter in the error page signin URL which contains the original URL of the request that failed authentication.
+Similar to the Ingress rule annotation <code>nginx.ingress.kubernetes.io/auth-signin-redirect-param</code>.
+<em><strong>default:</strong></em> &quot;rd&quot;</p>
+<h2 id="global-auth-response-headers">global-auth-response-headers</h2>
+<p>Sets the headers to pass to backend once authentication request completes. Applied to all the locations.
+Similar to the Ingress rule annotation <code>nginx.ingress.kubernetes.io/auth-response-headers</code>.
+<em><strong>default:</strong></em> &quot;&quot;</p>
+<h2 id="global-auth-request-redirect">global-auth-request-redirect</h2>
+<p>Sets the X-Auth-Request-Redirect header value. Applied to all the locations.
+Similar to the Ingress rule annotation <code>nginx.ingress.kubernetes.io/auth-request-redirect</code>.
+<em><strong>default:</strong></em> &quot;&quot;</p>
+<h2 id="global-auth-snippet">global-auth-snippet</h2>
+<p>Sets a custom snippet to use with external authentication. Applied to all the locations.
+Similar to the Ingress rule annotation <code>nginx.ingress.kubernetes.io/auth-request-redirect</code>.
+<em><strong>default:</strong></em> &quot;&quot;</p>
+<h2 id="global-auth-cache-key">global-auth-cache-key</h2>
+<p>Enables caching for global auth requests. Specify a lookup key for auth responses, e.g. <code>$remote_user$http_authorization</code>.</p>
+<h2 id="global-auth-cache-duration">global-auth-cache-duration</h2>
+<p>Set a caching time for auth responses based on their response codes, e.g. <code>200 202 30m</code>. See <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_valid" target="_blank">proxy_cache_valid</a> for details. You may specify multiple, comma-separated values: <code>200 202 10m, 401 5m</code>. defaults to <code>200 202 401 5m</code>.</p>
+<h2 id="no-auth-locations">no-auth-locations</h2>
+<p>A comma-separated list of locations that should not get authenticated.
+<em><strong>default:</strong></em> &quot;/.well-known/acme-challenge&quot;</p>
+<h2 id="block-cidrs">block-cidrs</h2>
+<p>A comma-separated list of IP addresses (or subnets), request from which have to be blocked globally.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_access_module.html#deny" target="_blank">http://nginx.org/en/docs/http/ngx_http_access_module.html#deny</a></p>
+<h2 id="block-user-agents">block-user-agents</h2>
+<p>A comma-separated list of User-Agent, request from which have to be blocked globally.
+It&apos;s possible to use here full strings and regular expressions. More details about valid patterns can be found at <code>map</code> Nginx directive documentation.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_map_module.html#map" target="_blank">http://nginx.org/en/docs/http/ngx_http_map_module.html#map</a></p>
+<h2 id="block-referers">block-referers</h2>
+<p>A comma-separated list of Referers, request from which have to be blocked globally.
+It&apos;s possible to use here full strings and regular expressions. More details about valid patterns can be found at <code>map</code> Nginx directive documentation.</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_map_module.html#map" target="_blank">http://nginx.org/en/docs/http/ngx_http_map_module.html#map</a></p>
+<h2 id="proxy-ssl-location-only">proxy-ssl-location-only</h2>
+<p>Set if proxy-ssl parameters should be applied only on locations and not on servers.
+<em><strong>default:</strong></em> is disabled</p>
+<h2 id="default-type">default-type</h2>
+<p>Sets the default MIME type of a response.
+<em><strong>default:</strong></em> text/html</p>
+<p><em>References:</em>
+<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#default_type" target="_blank">http://nginx.org/en/docs/http/ngx_http_core_module.html#default_type</a></p>
+<h2 id="global-rate-limit">global-rate-limit</h2>
+<ul>
+<li><code>global-rate-limit-status-code</code>: configure HTTP status code to return when rejecting requests. Defaults to 429.</li>
+</ul>
+<p>Configure <code>memcached</code> client for <a href="https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md#global-rate-limiting" target="_blank">Global Rate Limiting</a>.</p>
+<ul>
+<li><code>global-rate-limit-memcached-host</code>: IP/FQDN of memcached server to use. Required to enable Global Rate Limiting.</li>
+<li><code>global-rate-limit-memcached-port</code>: port of memcached server to use. Defaults default memcached port of <code>11211</code>.</li>
+<li><code>global-rate-limit-memcached-connect-timeout</code>: configure timeout for connect, send and receive operations. Unit is millisecond. Defaults to 50ms.</li>
+<li><code>global-rate-limit-memcached-max-idle-timeout</code>: configure timeout for cleaning idle connections. Unit is millisecond. Defaults to 50ms. </li>
+<li><code>global-rate-limit-memcached-pool-size</code>: configure number of max connections to keep alive. Make sure your <code>memcached</code> server can handle
+<code>global-rate-limit-memcached-pool-size * worker-processes * <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span> <span class="token attr-name">of</span> <span class="token attr-name">ingress-nginx</span> <span class="token attr-name">replicas</span><span class="token punctuation">&gt;</span></span></code> simultaneous connections.</li>
+</ul>
+<p>These settings get used by <a href="https://github.com/ElvinEfendi/lua-resty-global-throttle" target="_blank">lua-resty-global-throttle</a>
+that ingress-nginx includes. Refer to the link to learn more about <code>lua-resty-global-throttle</code>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="annotations.html" class="navigation navigation-prev " aria-label="Previous page: Annotations">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="custom-template.html" class="navigation navigation-next " aria-label="Next page: Custom Template">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Configmap","level":"1.6.1.2","depth":3,"next":{"title":"Custom Template","level":"1.6.1.3","depth":3,"path":"user-guide/nginx-configuration/custom-template.md","ref":"user-guide/nginx-configuration/custom-template.md","articles":[]},"previous":{"title":"Annotations","level":"1.6.1.1","depth":3,"path":"user-guide/nginx-configuration/annotations.md","ref":"user-guide/nginx-configuration/annotations.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Ingress Nginx 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"user-guide/nginx-configuration/configmap.md","mtime":"2021-07-15T00:57:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-15T00:58:07.939Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

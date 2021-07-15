@@ -1,0 +1,1417 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Troubleshooting · Ingress Nginx 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="kubectl-plugin.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Deploy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="deploy/baremetal.html">
+            
+                <a href="deploy/baremetal.html">
+            
+                    
+                    Baremetal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="deploy/hardening-guide.html">
+            
+                <a href="deploy/hardening-guide.html">
+            
+                    
+                    Hardening Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="deploy/">
+            
+                <a href="deploy/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="deploy/rbac.html">
+            
+                <a href="deploy/rbac.html">
+            
+                    
+                    Rbac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="deploy/upgrade.html">
+            
+                <a href="deploy/upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Developer Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="developer-guide/code-overview.html">
+            
+                <a href="developer-guide/code-overview.html">
+            
+                    
+                    Code Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="developer-guide/getting-started.html">
+            
+                <a href="developer-guide/getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="enhancements/">
+            
+                <a href="enhancements/">
+            
+                    
+                    Enhancements
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="enhancements/20190724-only-dynamic-ssl.html">
+            
+                <a href="enhancements/20190724-only-dynamic-ssl.html">
+            
+                    
+                    Remove Static SSL Configuration Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="enhancements/20190815-zone-aware-routing.html">
+            
+                <a href="enhancements/20190815-zone-aware-routing.html">
+            
+                    
+                    Availability Zone Aware Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="enhancements/YYYYMMDD-kep-template.html">
+            
+                <a href="enhancements/YYYYMMDD-kep-template.html">
+            
+                    
+                    KEP Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Affinity
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="examples/affinity/cookie/">
+            
+                <a href="examples/affinity/cookie/">
+            
+                    
+                    Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="examples/auth/basic/">
+            
+                <a href="examples/auth/basic/">
+            
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="examples/auth/client-certs/">
+            
+                <a href="examples/auth/client-certs/">
+            
+                    
+                    Client Certs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="examples/auth/external-auth/">
+            
+                <a href="examples/auth/external-auth/">
+            
+                    
+                    External Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="examples/auth/oauth-external-auth/">
+            
+                <a href="examples/auth/oauth-external-auth/">
+            
+                    
+                    Oauth External Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    Customization
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="examples/customization/configuration-snippets/">
+            
+                <a href="examples/customization/configuration-snippets/">
+            
+                    
+                    Configuration Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="examples/customization/custom-configuration/">
+            
+                <a href="examples/customization/custom-configuration/">
+            
+                    
+                    Custom Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="examples/customization/custom-errors/">
+            
+                <a href="examples/customization/custom-errors/">
+            
+                    
+                    Custom Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="examples/customization/custom-headers/">
+            
+                <a href="examples/customization/custom-headers/">
+            
+                    
+                    Custom Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="examples/customization/external-auth-headers/">
+            
+                <a href="examples/customization/external-auth-headers/">
+            
+                    
+                    External Auth Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="examples/customization/ssl-dh-param/">
+            
+                <a href="examples/customization/ssl-dh-param/">
+            
+                    
+                    Ssl Dh Param
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="examples/customization/sysctl/">
+            
+                <a href="examples/customization/sysctl/">
+            
+                    
+                    Sysctl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="examples/docker-registry/">
+            
+                <a href="examples/docker-registry/">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="examples/grpc/">
+            
+                <a href="examples/grpc/">
+            
+                    
+                    Grpc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="examples/multi-tls/">
+            
+                <a href="examples/multi-tls/">
+            
+                    
+                    Multi Tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="examples/psp/">
+            
+                <a href="examples/psp/">
+            
+                    
+                    Psp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="examples/rewrite/">
+            
+                <a href="examples/rewrite/">
+            
+                    
+                    Rewrite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="examples/static-ip/">
+            
+                <a href="examples/static-ip/">
+            
+                    
+                    Static Ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="examples/tls-termination/">
+            
+                <a href="examples/tls-termination/">
+            
+                    
+                    Tls Termination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="examples/">
+            
+                <a href="examples/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="examples/PREREQUISITES.html">
+            
+                <a href="examples/PREREQUISITES.html">
+            
+                    
+                    PREREQUISITES
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    User Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Nginx Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="user-guide/nginx-configuration/annotations.html">
+            
+                <a href="user-guide/nginx-configuration/annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="user-guide/nginx-configuration/configmap.html">
+            
+                <a href="user-guide/nginx-configuration/configmap.html">
+            
+                    
+                    Configmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="user-guide/nginx-configuration/custom-template.html">
+            
+                <a href="user-guide/nginx-configuration/custom-template.html">
+            
+                    
+                    Custom Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="user-guide/nginx-configuration/">
+            
+                <a href="user-guide/nginx-configuration/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="user-guide/nginx-configuration/log-format.html">
+            
+                <a href="user-guide/nginx-configuration/log-format.html">
+            
+                    
+                    Log Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    Third Party Addons
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="user-guide/third-party-addons/modsecurity.html">
+            
+                <a href="user-guide/third-party-addons/modsecurity.html">
+            
+                    
+                    Modsecurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="user-guide/third-party-addons/opentracing.html">
+            
+                <a href="user-guide/third-party-addons/opentracing.html">
+            
+                    
+                    Opentracing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="user-guide/basic-usage.html">
+            
+                <a href="user-guide/basic-usage.html">
+            
+                    
+                    Basic Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="user-guide/cli-arguments.html">
+            
+                <a href="user-guide/cli-arguments.html">
+            
+                    
+                    Cli Arguments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="user-guide/custom-errors.html">
+            
+                <a href="user-guide/custom-errors.html">
+            
+                    
+                    Custom Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="user-guide/default-backend.html">
+            
+                <a href="user-guide/default-backend.html">
+            
+                    
+                    Default Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="user-guide/exposing-tcp-udp-services.html">
+            
+                <a href="user-guide/exposing-tcp-udp-services.html">
+            
+                    
+                    Exposing Tcp Udp Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="user-guide/external-articles.html">
+            
+                <a href="user-guide/external-articles.html">
+            
+                    
+                    External Articles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="user-guide/fcgi-services.html">
+            
+                <a href="user-guide/fcgi-services.html">
+            
+                    
+                    Fcgi Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="user-guide/ingress-path-matching.html">
+            
+                <a href="user-guide/ingress-path-matching.html">
+            
+                    
+                    Ingress Path Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="user-guide/miscellaneous.html">
+            
+                <a href="user-guide/miscellaneous.html">
+            
+                    
+                    Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="user-guide/monitoring.html">
+            
+                <a href="user-guide/monitoring.html">
+            
+                    
+                    Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="user-guide/multiple-ingress.html">
+            
+                <a href="user-guide/multiple-ingress.html">
+            
+                    
+                    Multiple Ingress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="user-guide/tls.html">
+            
+                <a href="user-guide/tls.html">
+            
+                    
+                    Tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="e2e-tests.html">
+            
+                <a href="e2e-tests.html">
+            
+                    
+                    E 2 E Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="how-it-works.html">
+            
+                <a href="how-it-works.html">
+            
+                    
+                    How It Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="kubectl-plugin.html">
+            
+                <a href="kubectl-plugin.html">
+            
+                    
+                    Kubectl Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="troubleshooting.html">
+            
+                <a href="troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Troubleshooting</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--
+-----------------NOTICE------------------------
+This file is referenced in code as
+https://github.com/kubernetes/ingress-nginx/blob/master/docs/troubleshooting.md
+Do not move it without providing redirects.
+-----------------------------------------------
+-->
+<h1 id="troubleshooting">Troubleshooting</h1>
+<h2 id="ingress-controller-logs-and-events">Ingress-Controller Logs and Events</h2>
+<p>There are many ways to troubleshoot the ingress-controller. The following are basic troubleshooting
+methods to obtain more information.</p>
+<p>Check the Ingress Resource Events</p>
+<pre class="language-"><code class="lang-console">$ kubectl get ing -n <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>namespace-of-ingress-resource</span><span class="token punctuation">&gt;</span></span>
+NAME           HOSTS      ADDRESS     PORTS     AGE
+cafe-ingress   cafe.com   10.0.2.15   80        25s
+
+$ kubectl describe ing <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ingress-resource-name</span><span class="token punctuation">&gt;</span></span> -n <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>namespace-of-ingress-resource</span><span class="token punctuation">&gt;</span></span>
+Name:             cafe-ingress
+Namespace:        default
+Address:          10.0.2.15
+Default backend:  default-http-backend:80 (172.17.0.5:8080)
+Rules:
+  Host      Path  Backends
+  ----      ----  --------
+  cafe.com
+            /tea      tea-svc:80 (<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>none</span><span class="token punctuation">&gt;</span></span>)
+            /coffee   coffee-svc:80 (<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>none</span><span class="token punctuation">&gt;</span></span>)
+Annotations:
+  kubectl.kubernetes.io/last-applied-configuration:  {&quot;apiVersion&quot;:&quot;networking.k8s.io/v1beta1&quot;,&quot;kind&quot;:&quot;Ingress&quot;,&quot;metadata&quot;:{&quot;annotations&quot;:{},&quot;name&quot;:&quot;cafe-ingress&quot;,&quot;namespace&quot;:&quot;default&quot;,&quot;selfLink&quot;:&quot;/apis/networking/v1beta1/namespaces/default/ingresses/cafe-ingress&quot;},&quot;spec&quot;:{&quot;rules&quot;:[{&quot;host&quot;:&quot;cafe.com&quot;,&quot;http&quot;:{&quot;paths&quot;:[{&quot;backend&quot;:{&quot;serviceName&quot;:&quot;tea-svc&quot;,&quot;servicePort&quot;:80},&quot;path&quot;:&quot;/tea&quot;},{&quot;backend&quot;:{&quot;serviceName&quot;:&quot;coffee-svc&quot;,&quot;servicePort&quot;:80},&quot;path&quot;:&quot;/coffee&quot;}]}}]},&quot;status&quot;:{&quot;loadBalancer&quot;:{&quot;ingress&quot;:[{&quot;ip&quot;:&quot;169.48.142.110&quot;}]}}}
+
+Events:
+  Type    Reason  Age   From                      Message
+  ----    ------  ----  ----                      -------
+  Normal  CREATE  1m    nginx-ingress-controller  Ingress default/cafe-ingress
+  Normal  UPDATE  58s   nginx-ingress-controller  Ingress default/cafe-ingress
+</code></pre>
+<p>Check the Ingress Controller Logs</p>
+<pre class="language-"><code class="lang-console">$ kubectl get pods -n <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>namespace-of-ingress-controller</span><span class="token punctuation">&gt;</span></span>
+NAME                                        READY     STATUS    RESTARTS   AGE
+nginx-ingress-controller-67956bf89d-fv58j   1/1       Running   0          1m
+
+$ kubectl logs -n <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>namespace</span><span class="token punctuation">&gt;</span></span> nginx-ingress-controller-67956bf89d-fv58j
+-------------------------------------------------------------------------------
+NGINX Ingress controller
+  Release:    0.14.0
+  Build:      git-734361d
+  Repository: https://github.com/kubernetes/ingress-nginx
+-------------------------------------------------------------------------------
+....
+</code></pre>
+<p>Check the Nginx Configuration</p>
+<pre class="language-"><code class="lang-console">$ kubectl get pods -n <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>namespace-of-ingress-controller</span><span class="token punctuation">&gt;</span></span>
+NAME                                        READY     STATUS    RESTARTS   AGE
+nginx-ingress-controller-67956bf89d-fv58j   1/1       Running   0          1m
+
+$ kubectl exec -it -n <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>namespace-of-ingress-controller</span><span class="token punctuation">&gt;</span></span> nginx-ingress-controller-67956bf89d-fv58j -- cat /etc/nginx/nginx.conf
+daemon off;
+worker_processes 2;
+pid /run/nginx.pid;
+worker_rlimit_nofile 523264;
+worker_shutdown_timeout 240s;
+events {
+    multi_accept        on;
+    worker_connections  16384;
+    use                 epoll;
+}
+http {
+....
+</code></pre>
+<p>Check if used Services Exist</p>
+<pre class="language-"><code class="lang-console">$ kubectl get svc --all-namespaces
+NAMESPACE     NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)         AGE
+default       coffee-svc             ClusterIP   10.106.154.35    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>none</span><span class="token punctuation">&gt;</span></span>        80/TCP          18m
+default       kubernetes             ClusterIP   10.96.0.1        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>none</span><span class="token punctuation">&gt;</span></span>        443/TCP         30m
+default       tea-svc                ClusterIP   10.104.172.12    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>none</span><span class="token punctuation">&gt;</span></span>        80/TCP          18m
+kube-system   default-http-backend   NodePort    10.108.189.236   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>none</span><span class="token punctuation">&gt;</span></span>        80:30001/TCP    30m
+kube-system   kube-dns               ClusterIP   10.96.0.10       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>none</span><span class="token punctuation">&gt;</span></span>        53/UDP,53/TCP   30m
+kube-system   kubernetes-dashboard   NodePort    10.103.128.17    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>none</span><span class="token punctuation">&gt;</span></span>        80:30000/TCP    30m
+</code></pre>
+<h2 id="debug-logging">Debug Logging</h2>
+<p>Using the flag <code>--v=XX</code> it is possible to increase the level of logging. This is performed by editing
+the deployment.</p>
+<pre class="language-"><code class="lang-console">$ kubectl get deploy -n <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>namespace-of-ingress-controller</span><span class="token punctuation">&gt;</span></span>
+NAME                       DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+default-http-backend       1         1         1            1           35m
+nginx-ingress-controller   1         1         1            1           35m
+
+$ kubectl edit deploy -n <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>namespace-of-ingress-controller</span><span class="token punctuation">&gt;</span></span> nginx-ingress-controller
+# Add --v=X to &quot;- args&quot;, where X is an integer
+</code></pre>
+<ul>
+<li><code>--v=2</code> shows details using <code>diff</code> about the changes in the configuration in nginx</li>
+<li><code>--v=3</code> shows details about the service, Ingress rule, endpoint changes and it dumps the nginx configuration in JSON format</li>
+<li><code>--v=5</code> configures NGINX in <a href="http://nginx.org/en/docs/debugging_log.html" target="_blank">debug mode</a></li>
+</ul>
+<h2 id="authentication-to-the-kubernetes-api-server">Authentication to the Kubernetes API Server</h2>
+<p>A number of components are involved in the authentication process and the first step is to narrow
+down the source of the problem, namely whether it is a problem with service authentication or
+with the kubeconfig file.</p>
+<p>Both authentications must work:</p>
+<pre class="language-"><code>+-------------+   service          +------------+
+|             |   authentication   |            |
++  apiserver  +&lt;-------------------+  ingress   |
+|             |                    | controller |
++-------------+                    +------------+
+</code></pre><p><strong>Service authentication</strong></p>
+<p>The Ingress controller needs information from apiserver. Therefore, authentication is required, which can be achieved in two different ways:</p>
+<ol>
+<li><p><em>Service Account:</em> This is recommended, because nothing has to be configured. The Ingress controller will use information provided by the system to communicate with the API server. See &apos;Service Account&apos; section for details.</p>
+</li>
+<li><p><em>Kubeconfig file:</em> In some Kubernetes environments service accounts are not available. In this case a manual configuration is required. The Ingress controller binary can be started with the <code>--kubeconfig</code> flag. The value of the flag is a path to a file specifying how to connect to the API server. Using the <code>--kubeconfig</code> does not requires the flag <code>--apiserver-host</code>.
+The format of the file is identical to <code>~/.kube/config</code> which is used by kubectl to connect to the API server. See &apos;kubeconfig&apos; section for details.</p>
+</li>
+<li><p><em>Using the flag <code>--apiserver-host</code>:</em> Using this flag <code>--apiserver-host=http://localhost:8080</code> it is possible to specify an unsecured API server or reach a remote kubernetes cluster using <a href="https://kubernetes.io/docs/user-guide/kubectl/kubectl_proxy/" target="_blank">kubectl proxy</a>.
+Please do not use this approach in production.</p>
+</li>
+</ol>
+<p>In the diagram below you can see the full authentication flow with all options, starting with the browser
+on the lower left hand side.</p>
+<pre class="language-"><code>Kubernetes                                                  Workstation
++---------------------------------------------------+     +------------------+
+|                                                   |     |                  |
+|  +-----------+   apiserver        +------------+  |     |  +------------+  |
+|  |           |   proxy            |            |  |     |  |            |  |
+|  | apiserver |                    |  ingress   |  |     |  |  ingress   |  |
+|  |           |                    | controller |  |     |  | controller |  |
+|  |           |                    |            |  |     |  |            |  |
+|  |           |                    |            |  |     |  |            |  |
+|  |           |  service account/  |            |  |     |  |            |  |
+|  |           |  kubeconfig        |            |  |     |  |            |  |
+|  |           +&lt;-------------------+            |  |     |  |            |  |
+|  |           |                    |            |  |     |  |            |  |
+|  +------+----+      kubeconfig    +------+-----+  |     |  +------+-----+  |
+|         |&lt;--------------------------------------------------------|        |
+|                                                   |     |                  |
++---------------------------------------------------+     +------------------+
+</code></pre><h3 id="service-account">Service Account</h3>
+<p>If using a service account to connect to the API server, the ingress-controller expects the file
+<code>/var/run/secrets/kubernetes.io/serviceaccount/token</code> to be present. It provides a secret
+token that is required to authenticate with the API server.</p>
+<p>Verify with the following commands:</p>
+<pre class="language-"><code class="lang-console"># start a container that contains curl
+$ kubectl run test --image=tutum/curl -- sleep 10000
+
+# check that container is running
+$ kubectl get pods
+NAME                   READY     STATUS    RESTARTS   AGE
+test-701078429-s5kca   1/1       Running   0          16s
+
+# check if secret exists
+$ kubectl exec test-701078429-s5kca -- ls /var/run/secrets/kubernetes.io/serviceaccount/
+ca.crt
+namespace
+token
+
+# get service IP of master
+$ kubectl get services
+NAME         CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   10.0.0.1     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>none</span><span class="token punctuation">&gt;</span></span>        443/TCP   1d
+
+# check base connectivity from cluster inside
+$ kubectl exec test-701078429-s5kca -- curl -k https://10.0.0.1
+Unauthorized
+
+# connect using tokens
+$ TOKEN_VALUE=$(kubectl exec test-701078429-s5kca -- cat /var/run/secrets/kubernetes.io/serviceaccount/token)
+$ echo $TOKEN_VALUE
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3Mi....9A
+$ kubectl exec test-701078429-s5kca -- curl --cacert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt -H  &quot;Authorization: Bearer $TOKEN_VALUE&quot; https://10.0.0.1
+{
+  &quot;paths&quot;: [
+    &quot;/api&quot;,
+    &quot;/api/v1&quot;,
+    &quot;/apis&quot;,
+    &quot;/apis/apps&quot;,
+    &quot;/apis/apps/v1alpha1&quot;,
+    &quot;/apis/authentication.k8s.io&quot;,
+    &quot;/apis/authentication.k8s.io/v1beta1&quot;,
+    &quot;/apis/authorization.k8s.io&quot;,
+    &quot;/apis/authorization.k8s.io/v1beta1&quot;,
+    &quot;/apis/autoscaling&quot;,
+    &quot;/apis/autoscaling/v1&quot;,
+    &quot;/apis/batch&quot;,
+    &quot;/apis/batch/v1&quot;,
+    &quot;/apis/batch/v2alpha1&quot;,
+    &quot;/apis/certificates.k8s.io&quot;,
+    &quot;/apis/certificates.k8s.io/v1alpha1&quot;,
+    &quot;/apis/networking&quot;,
+    &quot;/apis/networking/v1beta1&quot;,
+    &quot;/apis/policy&quot;,
+    &quot;/apis/policy/v1alpha1&quot;,
+    &quot;/apis/rbac.authorization.k8s.io&quot;,
+    &quot;/apis/rbac.authorization.k8s.io/v1alpha1&quot;,
+    &quot;/apis/storage.k8s.io&quot;,
+    &quot;/apis/storage.k8s.io/v1beta1&quot;,
+    &quot;/healthz&quot;,
+    &quot;/healthz/ping&quot;,
+    &quot;/logs&quot;,
+    &quot;/metrics&quot;,
+    &quot;/swaggerapi/&quot;,
+    &quot;/ui/&quot;,
+    &quot;/version&quot;
+  ]
+}
+</code></pre>
+<p>If it is not working, there are two possible reasons:</p>
+<ol>
+<li><p>The contents of the tokens are invalid. Find the secret name with <code>kubectl get secrets | grep service-account</code> and
+delete it with <code>kubectl delete secret <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span></code>. It will automatically be recreated.</p>
+</li>
+<li><p>You have a non-standard Kubernetes installation and the file containing the token may not be present.
+The API server will mount a volume containing this file, but only if the API server is configured to use
+the ServiceAccount admission controller.
+If you experience this error, verify that your API server is using the ServiceAccount admission controller.
+If you are configuring the API server by hand, you can set this with the <code>--admission-control</code> parameter.</p>
+<blockquote>
+<p>Note that you should use other admission controllers as well. Before configuring this option, you should read about admission controllers.</p>
+</blockquote>
+</li>
+</ol>
+<p>More information:</p>
+<ul>
+<li><a href="http://kubernetes.io/docs/user-guide/service-accounts/" target="_blank">User Guide: Service Accounts</a></li>
+<li><a href="http://kubernetes.io/docs/admin/service-accounts-admin/" target="_blank">Cluster Administrator Guide: Managing Service Accounts</a></li>
+</ul>
+<h2 id="kube-config">Kube-Config</h2>
+<p>If you want to use a kubeconfig file for authentication, follow the <a href="deploy/">deploy procedure</a> and
+add the flag <code>--kubeconfig=/etc/kubernetes/kubeconfig.yaml</code> to the args section of the deployment.</p>
+<h2 id="using-gdb-with-nginx">Using GDB with Nginx</h2>
+<p><a href="https://www.gnu.org/software/gdb/" target="_blank">Gdb</a> can be used to with nginx to perform a configuration
+dump. This allows us to see which configuration is being used, as well as older configurations.</p>
+<p>Note: The below is based on the nginx <a href="https://docs.nginx.com/nginx/admin-guide/monitoring/debugging/#dumping-nginx-configuration-from-a-running-process" target="_blank">documentation</a>.</p>
+<ol>
+<li>SSH into the worker</li>
+</ol>
+<pre class="language-"><code class="lang-console">$ ssh user@workerIP
+</code></pre>
+<ol>
+<li>Obtain the Docker Container Running nginx</li>
+</ol>
+<pre class="language-"><code class="lang-console">$ docker ps | grep nginx-ingress-controller
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+d9e1d243156a        quay.io/kubernetes-ingress-controller/nginx-ingress-controller   &quot;/usr/bin/dumb-init &#x2026;&quot;   19 minutes ago      Up 19 minutes                                                                            k8s_nginx-ingress-controller_nginx-ingress-controller-67956bf89d-mqxzt_kube-system_079f31ec-aa37-11e8-ad39-080027a227db_0
+</code></pre>
+<ol>
+<li>Exec into the container</li>
+</ol>
+<pre class="language-"><code class="lang-console">$ docker exec -it --user=0 --privileged d9e1d243156a bash
+</code></pre>
+<ol>
+<li>Make sure nginx is running in <code>--with-debug</code></li>
+</ol>
+<pre class="language-"><code class="lang-console">$ nginx -V 2&gt;&amp;1 | grep -- &apos;--with-debug&apos;
+</code></pre>
+<ol>
+<li>Get list of processes running on container</li>
+</ol>
+<pre class="language-"><code class="lang-console">$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 20:23 ?        00:00:00 /usr/bin/dumb-init /nginx-ingres
+root         5     1  0 20:23 ?        00:00:05 /nginx-ingress-controller --defa
+root        21     5  0 20:23 ?        00:00:00 nginx: master process /usr/sbin/
+nobody     106    21  0 20:23 ?        00:00:00 nginx: worker process
+nobody     107    21  0 20:23 ?        00:00:00 nginx: worker process
+root       172     0  0 20:43 pts/0    00:00:00 bash
+</code></pre>
+<ol>
+<li>Attach gdb to the nginx master process</li>
+</ol>
+<pre class="language-"><code class="lang-console">$ gdb -p 21
+....
+Attaching to process 21
+Reading symbols from /usr/sbin/nginx...done.
+....
+(gdb)
+</code></pre>
+<ol>
+<li>Copy and paste the following:</li>
+</ol>
+<pre class="language-"><code class="lang-console">set $cd = ngx_cycle-&gt;config_dump
+set $nelts = $cd.nelts
+set $elts = (ngx_conf_dump_t*)($cd.elts)
+while ($nelts-- &gt; 0)
+set $name = $elts[$nelts]-&gt;name.data
+printf &quot;Dumping %s to nginx_conf.txt\n&quot;, $name
+append memory nginx_conf.txt \
+        $elts[$nelts]-&gt;buffer.start $elts[$nelts]-&gt;buffer.end
+end
+</code></pre>
+<ol>
+<li><p>Quit GDB by pressing CTRL+D</p>
+</li>
+<li><p>Open nginx_conf.txt</p>
+</li>
+</ol>
+<pre class="language-"><code class="lang-console">cat nginx_conf.txt
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="kubectl-plugin.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Kubectl Plugin">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Troubleshooting","level":"1.10","depth":1,"previous":{"title":"Kubectl Plugin","level":"1.9","depth":1,"path":"kubectl-plugin.md","ref":"kubectl-plugin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Ingress Nginx 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"troubleshooting.md","mtime":"2021-07-15T00:57:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-15T00:58:07.939Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1206 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Availability Zone Aware Routing · Ingress Nginx 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="YYYYMMDD-kep-template.html" />
+    
+    
+    <link rel="prev" href="20190724-only-dynamic-ssl.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Deploy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../deploy/baremetal.html">
+            
+                <a href="../deploy/baremetal.html">
+            
+                    
+                    Baremetal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../deploy/hardening-guide.html">
+            
+                <a href="../deploy/hardening-guide.html">
+            
+                    
+                    Hardening Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../deploy/">
+            
+                <a href="../deploy/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../deploy/rbac.html">
+            
+                <a href="../deploy/rbac.html">
+            
+                    
+                    Rbac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../deploy/upgrade.html">
+            
+                <a href="../deploy/upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Developer Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../developer-guide/code-overview.html">
+            
+                <a href="../developer-guide/code-overview.html">
+            
+                    
+                    Code Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../developer-guide/getting-started.html">
+            
+                <a href="../developer-guide/getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Enhancements
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="20190724-only-dynamic-ssl.html">
+            
+                <a href="20190724-only-dynamic-ssl.html">
+            
+                    
+                    Remove Static SSL Configuration Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="20190815-zone-aware-routing.html">
+            
+                <a href="20190815-zone-aware-routing.html">
+            
+                    
+                    Availability Zone Aware Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="YYYYMMDD-kep-template.html">
+            
+                <a href="YYYYMMDD-kep-template.html">
+            
+                    
+                    KEP Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Affinity
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../examples/affinity/cookie/">
+            
+                <a href="../examples/affinity/cookie/">
+            
+                    
+                    Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../examples/auth/basic/">
+            
+                <a href="../examples/auth/basic/">
+            
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../examples/auth/client-certs/">
+            
+                <a href="../examples/auth/client-certs/">
+            
+                    
+                    Client Certs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../examples/auth/external-auth/">
+            
+                <a href="../examples/auth/external-auth/">
+            
+                    
+                    External Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../examples/auth/oauth-external-auth/">
+            
+                <a href="../examples/auth/oauth-external-auth/">
+            
+                    
+                    Oauth External Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    Customization
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../examples/customization/configuration-snippets/">
+            
+                <a href="../examples/customization/configuration-snippets/">
+            
+                    
+                    Configuration Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../examples/customization/custom-configuration/">
+            
+                <a href="../examples/customization/custom-configuration/">
+            
+                    
+                    Custom Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../examples/customization/custom-errors/">
+            
+                <a href="../examples/customization/custom-errors/">
+            
+                    
+                    Custom Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../examples/customization/custom-headers/">
+            
+                <a href="../examples/customization/custom-headers/">
+            
+                    
+                    Custom Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../examples/customization/external-auth-headers/">
+            
+                <a href="../examples/customization/external-auth-headers/">
+            
+                    
+                    External Auth Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../examples/customization/ssl-dh-param/">
+            
+                <a href="../examples/customization/ssl-dh-param/">
+            
+                    
+                    Ssl Dh Param
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../examples/customization/sysctl/">
+            
+                <a href="../examples/customization/sysctl/">
+            
+                    
+                    Sysctl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../examples/docker-registry/">
+            
+                <a href="../examples/docker-registry/">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../examples/grpc/">
+            
+                <a href="../examples/grpc/">
+            
+                    
+                    Grpc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../examples/multi-tls/">
+            
+                <a href="../examples/multi-tls/">
+            
+                    
+                    Multi Tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../examples/psp/">
+            
+                <a href="../examples/psp/">
+            
+                    
+                    Psp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../examples/rewrite/">
+            
+                <a href="../examples/rewrite/">
+            
+                    
+                    Rewrite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../examples/static-ip/">
+            
+                <a href="../examples/static-ip/">
+            
+                    
+                    Static Ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../examples/tls-termination/">
+            
+                <a href="../examples/tls-termination/">
+            
+                    
+                    Tls Termination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../examples/">
+            
+                <a href="../examples/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../examples/PREREQUISITES.html">
+            
+                <a href="../examples/PREREQUISITES.html">
+            
+                    
+                    PREREQUISITES
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    User Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Nginx Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../user-guide/nginx-configuration/annotations.html">
+            
+                <a href="../user-guide/nginx-configuration/annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../user-guide/nginx-configuration/configmap.html">
+            
+                <a href="../user-guide/nginx-configuration/configmap.html">
+            
+                    
+                    Configmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../user-guide/nginx-configuration/custom-template.html">
+            
+                <a href="../user-guide/nginx-configuration/custom-template.html">
+            
+                    
+                    Custom Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../user-guide/nginx-configuration/">
+            
+                <a href="../user-guide/nginx-configuration/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../user-guide/nginx-configuration/log-format.html">
+            
+                <a href="../user-guide/nginx-configuration/log-format.html">
+            
+                    
+                    Log Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    Third Party Addons
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../user-guide/third-party-addons/modsecurity.html">
+            
+                <a href="../user-guide/third-party-addons/modsecurity.html">
+            
+                    
+                    Modsecurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../user-guide/third-party-addons/opentracing.html">
+            
+                <a href="../user-guide/third-party-addons/opentracing.html">
+            
+                    
+                    Opentracing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../user-guide/basic-usage.html">
+            
+                <a href="../user-guide/basic-usage.html">
+            
+                    
+                    Basic Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../user-guide/cli-arguments.html">
+            
+                <a href="../user-guide/cli-arguments.html">
+            
+                    
+                    Cli Arguments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../user-guide/custom-errors.html">
+            
+                <a href="../user-guide/custom-errors.html">
+            
+                    
+                    Custom Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../user-guide/default-backend.html">
+            
+                <a href="../user-guide/default-backend.html">
+            
+                    
+                    Default Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../user-guide/exposing-tcp-udp-services.html">
+            
+                <a href="../user-guide/exposing-tcp-udp-services.html">
+            
+                    
+                    Exposing Tcp Udp Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../user-guide/external-articles.html">
+            
+                <a href="../user-guide/external-articles.html">
+            
+                    
+                    External Articles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../user-guide/fcgi-services.html">
+            
+                <a href="../user-guide/fcgi-services.html">
+            
+                    
+                    Fcgi Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../user-guide/ingress-path-matching.html">
+            
+                <a href="../user-guide/ingress-path-matching.html">
+            
+                    
+                    Ingress Path Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../user-guide/miscellaneous.html">
+            
+                <a href="../user-guide/miscellaneous.html">
+            
+                    
+                    Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../user-guide/monitoring.html">
+            
+                <a href="../user-guide/monitoring.html">
+            
+                    
+                    Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../user-guide/multiple-ingress.html">
+            
+                <a href="../user-guide/multiple-ingress.html">
+            
+                    
+                    Multiple Ingress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../user-guide/tls.html">
+            
+                <a href="../user-guide/tls.html">
+            
+                    
+                    Tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../e2e-tests.html">
+            
+                <a href="../e2e-tests.html">
+            
+                    
+                    E 2 E Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../how-it-works.html">
+            
+                <a href="../how-it-works.html">
+            
+                    
+                    How It Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../kubectl-plugin.html">
+            
+                <a href="../kubectl-plugin.html">
+            
+                    
+                    Kubectl Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../troubleshooting.html">
+            
+                <a href="../troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Availability Zone Aware Routing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="availability-zone-aware-routing">Availability zone aware routing</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<!-- toc -->
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#motivation">Motivation</a><ul>
+<li><a href="#goals">Goals</a></li>
+<li><a href="#non-goals">Non-Goals</a></li>
+</ul>
+</li>
+<li><a href="#proposal">Proposal</a></li>
+<li><a href="#implementation-history">Implementation History</a></li>
+<li><a href="#drawbacks-optional">Drawbacks [optional]</a><!-- /toc -->
+</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Teach ingress-nginx about availability zones where endpoints are running in. This way ingress-nginx pod will do its best to proxy to zone-local endpoint.</p>
+<h2 id="motivation">Motivation</h2>
+<p>When users run their services across multiple availability zones they usually pay for egress traffic between zones. Providers such as GCP, and Amazon EC2 usually charge extra for this feature.
+ingress-nginx when picking an endpoint to route request to does not consider whether the endpoint is in a different zone or the same one. That means it&apos;s at least equally likely
+that it will pick an endpoint from another zone and proxy the request to it. In this situation response from the endpoint to the ingress-nginx pod is considered
+inter-zone traffic and usually costs extra money.</p>
+<p>At the time of this writing, GCP charges $0.01 per GB of inter-zone egress traffic according to <a href="https://cloud.google.com/compute/network-pricing" target="_blank">https://cloud.google.com/compute/network-pricing</a>.
+According to <a href="https://datapath.io/resources/blog/what-are-aws-data-transfer-costs-and-how-to-minimize-them/" target="_blank">https://datapath.io/resources/blog/what-are-aws-data-transfer-costs-and-how-to-minimize-them/</a> Amazon also charges the same amount of money as GCP for cross-zone, egress traffic.</p>
+<p>This can be a lot of money depending on once&apos;s traffic. By teaching ingress-nginx about zones we can eliminate or at least decrease this cost.</p>
+<p>Arguably inter-zone network latency should also be better than cross-zone.</p>
+<h3 id="goals">Goals</h3>
+<ul>
+<li>Given a regional cluster running ingress-nginx, ingress-nginx should do best-effort to pick a zone-local endpoint when proxying</li>
+<li>This should not impact canary feature</li>
+<li>ingress-nginx should be able to operate successfully if there are no zonal endpoints</li>
+</ul>
+<h3 id="non-goals">Non-Goals</h3>
+<ul>
+<li>This feature inherently assumes that endpoints are distributed across zones in a way that they can handle all the traffic from ingress-nginx pod(s) in that zone</li>
+<li>This feature will be relying on <a href="https://kubernetes.io/docs/reference/kubernetes-api/labels-annotations-taints/#failure-domainbetakubernetesiozone" target="_blank">https://kubernetes.io/docs/reference/kubernetes-api/labels-annotations-taints/#failure-domainbetakubernetesiozone</a>, it is not this KEP&apos;s goal to support other cases</li>
+</ul>
+<h2 id="proposal">Proposal</h2>
+<p>The idea here is to have the controller part of ingress-nginx
+(1) detect what zone its current pod is running in and
+(2) detect the zone for every endpoint it knows about.
+After that, it will post that data as part of endpoints to Lua land.
+When picking an endpoint, the Lua balancer will try to pick zone-local endpoint first and
+if there is no zone-local endpoint then it will fall back to current behavior.</p>
+<p>Initially, this feature should be optional since it is going to make it harder to reason about the load balancing and not everyone might want that.</p>
+<p><strong>How does controller know what zone it runs in?</strong>
+We can have the pod spec pass the node name using downward API as an environment variable.
+Upon startup, the controller can get node details from the API based on the node name.
+Once the node details are obtained
+we can extract the zone from the <code>failure-domain.beta.kubernetes.io/zone</code> annotation.
+Then we can pass that value to Lua land through Nginx configuration
+when loading <code>lua_ingress.lua</code> module in <code>init_by_lua</code> phase.</p>
+<p><strong>How do we extract zones for endpoints?</strong>
+We can have the controller watch create and update events on nodes in the entire cluster and based on that keep the map of nodes to zones in the memory.
+And when we generate endpoints list, we can access node name using <code>.subsets.addresses[i].nodeName</code>
+and based on that fetch zone from the map in memory and store it as a field on the endpoint.
+<strong>This solution assumes <code>failure-domain.beta.kubernetes.io/zone</code></strong> annotation does not change until the end of the node&apos;s life. Otherwise, we have to
+watch update events as well on the nodes and that&apos;ll add even more overhead.</p>
+<p>Alternatively, we can get the list of nodes only when there&apos;s no node in the memory for the given node name. This is probably a better solution
+because then we would avoid watching for API changes on node resources. We can eagerly fetch all the nodes and build node name to zone mapping on start.
+From there on,  it will sync during endpoint building in the main event loop if there&apos;s no existing entry for the node of an endpoint.
+This means an extra API call in case cluster has expanded.</p>
+<p><strong>How do we make sure we do our best to choose zone-local endpoint?</strong>
+This will be done on the Lua side. For every backend, we will initialize two balancer instances:
+(1) with all endpoints
+(2) with all endpoints corresponding to the current zone for the backend.
+Then given the request once we choose what backend
+needs to serve the request, we will first try to use a zonal balancer for that backend.
+If a zonal balancer does not exist (i.e. there&apos;s no zonal endpoint)
+then we will use a general balancer.
+In case of zonal outages, we assume that the readiness probe will fail and the controller will
+see no endpoints for the backend and therefore we will use a general balancer.</p>
+<p>We can enable the feature using a configmap setting. Doing it this way makes it easier to rollback in case of a problem.</p>
+<h2 id="implementation-history">Implementation History</h2>
+<ul>
+<li>initial version of KEP is shipped</li>
+<li>proposal and implementation details are done</li>
+</ul>
+<h2 id="drawbacks-optional">Drawbacks [optional]</h2>
+<p>More load on the Kubernetes API server.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="20190724-only-dynamic-ssl.html" class="navigation navigation-prev " aria-label="Previous page: Remove Static SSL Configuration Mode">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="YYYYMMDD-kep-template.html" class="navigation navigation-next " aria-label="Next page: KEP Template">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Availability Zone Aware Routing","authors":["@ElvinEfendi"],"reviewers":["@aledbf"],"approvers":["@aledbf"],"editor":"TBD","creation-date":"2019-08-15T00:00:00.000Z","last-updated":"2019-08-16T00:00:00.000Z","status":"implementable","level":"1.4.2","depth":2,"next":{"title":"KEP Template","level":"1.4.3","depth":2,"path":"enhancements/YYYYMMDD-kep-template.md","ref":"enhancements/YYYYMMDD-kep-template.md","articles":[]},"previous":{"title":"Remove Static SSL Configuration Mode","level":"1.4.1","depth":2,"path":"enhancements/20190724-only-dynamic-ssl.md","ref":"enhancements/20190724-only-dynamic-ssl.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Ingress Nginx 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"enhancements/20190815-zone-aware-routing.md","mtime":"2021-07-15T00:57:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-15T00:58:07.939Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1359 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Cli Arguments · Ingress Nginx 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="custom-errors.html" />
+    
+    
+    <link rel="prev" href="basic-usage.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Deploy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../deploy/baremetal.html">
+            
+                <a href="../deploy/baremetal.html">
+            
+                    
+                    Baremetal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../deploy/hardening-guide.html">
+            
+                <a href="../deploy/hardening-guide.html">
+            
+                    
+                    Hardening Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../deploy/">
+            
+                <a href="../deploy/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../deploy/rbac.html">
+            
+                <a href="../deploy/rbac.html">
+            
+                    
+                    Rbac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../deploy/upgrade.html">
+            
+                <a href="../deploy/upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Developer Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../developer-guide/code-overview.html">
+            
+                <a href="../developer-guide/code-overview.html">
+            
+                    
+                    Code Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../developer-guide/getting-started.html">
+            
+                <a href="../developer-guide/getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../enhancements/">
+            
+                <a href="../enhancements/">
+            
+                    
+                    Enhancements
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../enhancements/20190724-only-dynamic-ssl.html">
+            
+                <a href="../enhancements/20190724-only-dynamic-ssl.html">
+            
+                    
+                    Remove Static SSL Configuration Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../enhancements/20190815-zone-aware-routing.html">
+            
+                <a href="../enhancements/20190815-zone-aware-routing.html">
+            
+                    
+                    Availability Zone Aware Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../enhancements/YYYYMMDD-kep-template.html">
+            
+                <a href="../enhancements/YYYYMMDD-kep-template.html">
+            
+                    
+                    KEP Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Affinity
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../examples/affinity/cookie/">
+            
+                <a href="../examples/affinity/cookie/">
+            
+                    
+                    Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../examples/auth/basic/">
+            
+                <a href="../examples/auth/basic/">
+            
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../examples/auth/client-certs/">
+            
+                <a href="../examples/auth/client-certs/">
+            
+                    
+                    Client Certs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../examples/auth/external-auth/">
+            
+                <a href="../examples/auth/external-auth/">
+            
+                    
+                    External Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../examples/auth/oauth-external-auth/">
+            
+                <a href="../examples/auth/oauth-external-auth/">
+            
+                    
+                    Oauth External Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    Customization
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../examples/customization/configuration-snippets/">
+            
+                <a href="../examples/customization/configuration-snippets/">
+            
+                    
+                    Configuration Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../examples/customization/custom-configuration/">
+            
+                <a href="../examples/customization/custom-configuration/">
+            
+                    
+                    Custom Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../examples/customization/custom-errors/">
+            
+                <a href="../examples/customization/custom-errors/">
+            
+                    
+                    Custom Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../examples/customization/custom-headers/">
+            
+                <a href="../examples/customization/custom-headers/">
+            
+                    
+                    Custom Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../examples/customization/external-auth-headers/">
+            
+                <a href="../examples/customization/external-auth-headers/">
+            
+                    
+                    External Auth Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../examples/customization/ssl-dh-param/">
+            
+                <a href="../examples/customization/ssl-dh-param/">
+            
+                    
+                    Ssl Dh Param
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../examples/customization/sysctl/">
+            
+                <a href="../examples/customization/sysctl/">
+            
+                    
+                    Sysctl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../examples/docker-registry/">
+            
+                <a href="../examples/docker-registry/">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../examples/grpc/">
+            
+                <a href="../examples/grpc/">
+            
+                    
+                    Grpc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../examples/multi-tls/">
+            
+                <a href="../examples/multi-tls/">
+            
+                    
+                    Multi Tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../examples/psp/">
+            
+                <a href="../examples/psp/">
+            
+                    
+                    Psp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../examples/rewrite/">
+            
+                <a href="../examples/rewrite/">
+            
+                    
+                    Rewrite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../examples/static-ip/">
+            
+                <a href="../examples/static-ip/">
+            
+                    
+                    Static Ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../examples/tls-termination/">
+            
+                <a href="../examples/tls-termination/">
+            
+                    
+                    Tls Termination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../examples/">
+            
+                <a href="../examples/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../examples/PREREQUISITES.html">
+            
+                <a href="../examples/PREREQUISITES.html">
+            
+                    
+                    PREREQUISITES
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    User Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Nginx Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="nginx-configuration/annotations.html">
+            
+                <a href="nginx-configuration/annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="nginx-configuration/configmap.html">
+            
+                <a href="nginx-configuration/configmap.html">
+            
+                    
+                    Configmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="nginx-configuration/custom-template.html">
+            
+                <a href="nginx-configuration/custom-template.html">
+            
+                    
+                    Custom Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="nginx-configuration/">
+            
+                <a href="nginx-configuration/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="nginx-configuration/log-format.html">
+            
+                <a href="nginx-configuration/log-format.html">
+            
+                    
+                    Log Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    Third Party Addons
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="third-party-addons/modsecurity.html">
+            
+                <a href="third-party-addons/modsecurity.html">
+            
+                    
+                    Modsecurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="third-party-addons/opentracing.html">
+            
+                <a href="third-party-addons/opentracing.html">
+            
+                    
+                    Opentracing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="basic-usage.html">
+            
+                <a href="basic-usage.html">
+            
+                    
+                    Basic Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.4" data-path="cli-arguments.html">
+            
+                <a href="cli-arguments.html">
+            
+                    
+                    Cli Arguments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="custom-errors.html">
+            
+                <a href="custom-errors.html">
+            
+                    
+                    Custom Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="default-backend.html">
+            
+                <a href="default-backend.html">
+            
+                    
+                    Default Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="exposing-tcp-udp-services.html">
+            
+                <a href="exposing-tcp-udp-services.html">
+            
+                    
+                    Exposing Tcp Udp Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="external-articles.html">
+            
+                <a href="external-articles.html">
+            
+                    
+                    External Articles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="fcgi-services.html">
+            
+                <a href="fcgi-services.html">
+            
+                    
+                    Fcgi Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="ingress-path-matching.html">
+            
+                <a href="ingress-path-matching.html">
+            
+                    
+                    Ingress Path Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="miscellaneous.html">
+            
+                <a href="miscellaneous.html">
+            
+                    
+                    Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="monitoring.html">
+            
+                <a href="monitoring.html">
+            
+                    
+                    Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="multiple-ingress.html">
+            
+                <a href="multiple-ingress.html">
+            
+                    
+                    Multiple Ingress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="tls.html">
+            
+                <a href="tls.html">
+            
+                    
+                    Tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../e2e-tests.html">
+            
+                <a href="../e2e-tests.html">
+            
+                    
+                    E 2 E Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../how-it-works.html">
+            
+                <a href="../how-it-works.html">
+            
+                    
+                    How It Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../kubectl-plugin.html">
+            
+                <a href="../kubectl-plugin.html">
+            
+                    
+                    Kubectl Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../troubleshooting.html">
+            
+                <a href="../troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Cli Arguments</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="command-line-arguments">Command line arguments</h1>
+<p>The following command line arguments are accepted by the Ingress controller executable.</p>
+<p>They are set in the container spec of the <code>nginx-ingress-controller</code> Deployment manifest</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--add_dir_header</code></td>
+<td>If true, adds the file directory to the header</td>
+</tr>
+<tr>
+<td><code>--alsologtostderr</code></td>
+<td>log to standard error as well as files</td>
+</tr>
+<tr>
+<td><code>--annotations-prefix</code></td>
+<td>Prefix of the Ingress annotations specific to the NGINX controller. (default &quot;nginx.ingress.kubernetes.io&quot;)</td>
+</tr>
+<tr>
+<td><code>--apiserver-host</code></td>
+<td>Address of the Kubernetes API server. Takes the form &quot;protocol://address:port&quot;. If not specified, it is assumed the program runs inside a Kubernetes cluster and local discovery is attempted.</td>
+</tr>
+<tr>
+<td><code>--certificate-authority</code></td>
+<td>Path to a cert file for the certificate authority. This certificate is used only when the flag --apiserver-host is specified.</td>
+</tr>
+<tr>
+<td><code>--configmap</code></td>
+<td>Name of the ConfigMap containing custom global configurations for the controller.</td>
+</tr>
+<tr>
+<td><code>--default-backend-service</code></td>
+<td>Service used to serve HTTP requests not matching any known server name (catch-all). Takes the form &quot;namespace/name&quot;. The controller configures NGINX to forward requests to the first port of this Service.</td>
+</tr>
+<tr>
+<td><code>--default-server-port</code></td>
+<td>Port to use for exposing the default server (catch-all). (default 8181)</td>
+</tr>
+<tr>
+<td><code>--default-ssl-certificate</code></td>
+<td>Secret containing a SSL certificate to be used by the default HTTPS server (catch-all). Takes the form &quot;namespace/name&quot;.</td>
+</tr>
+<tr>
+<td><code>--disable-catch-all</code></td>
+<td>Disable support for catch-all Ingresses</td>
+</tr>
+<tr>
+<td><code>--election-id</code></td>
+<td>Election id to use for Ingress status updates. (default &quot;ingress-controller-leader&quot;)</td>
+</tr>
+<tr>
+<td><code>--enable-metrics</code></td>
+<td>Enables the collection of NGINX metrics (default true)</td>
+</tr>
+<tr>
+<td><code>--enable-ssl-chain-completion</code></td>
+<td>Autocomplete SSL certificate chains with missing intermediate CA certificates. Certificates uploaded to Kubernetes must have the &quot;Authority Information Access&quot; X.509 v3 extension for this to succeed.</td>
+</tr>
+<tr>
+<td><code>--enable-ssl-passthrough</code></td>
+<td>Enable SSL Passthrough.</td>
+</tr>
+<tr>
+<td><code>--health-check-path</code></td>
+<td>URL path of the health check endpoint. Configured inside the NGINX status server. All requests received on the port defined by the healthz-port parameter are forwarded internally to this path. (default &quot;/healthz&quot;)</td>
+</tr>
+<tr>
+<td><code>--health-check-timeout</code></td>
+<td>Time limit, in seconds, for a probe to health-check-path to succeed. (default 10)</td>
+</tr>
+<tr>
+<td><code>--healthz-port</code></td>
+<td>Port to use for the healthz endpoint. (default 10254)</td>
+</tr>
+<tr>
+<td><code>--http-port</code></td>
+<td>Port to use for servicing HTTP traffic. (default 80)</td>
+</tr>
+<tr>
+<td><code>--https-port</code></td>
+<td>Port to use for servicing HTTPS traffic. (default 443)</td>
+</tr>
+<tr>
+<td><code>--ingress-class</code></td>
+<td>Name of the ingress class this controller satisfies. The class of an Ingress object is set using the field IngressClassName in Kubernetes clusters version v1.18.0 or higher or the annotation &quot;kubernetes.io/ingress.class&quot; (deprecated). If this parameter is not set, or set to the default value of &quot;nginx&quot;, it will handle ingresses with either an empty or &quot;nginx&quot; class name.</td>
+</tr>
+<tr>
+<td><code>--kubeconfig</code></td>
+<td>Path to a kubeconfig file containing authorization and API server information.</td>
+</tr>
+<tr>
+<td><code>--log_backtrace_at</code></td>
+<td>when logging hits line file:N, emit a stack trace (default :0)</td>
+</tr>
+<tr>
+<td><code>--log_dir</code></td>
+<td>If non-empty, write log files in this directory</td>
+</tr>
+<tr>
+<td><code>--log_file</code></td>
+<td>If non-empty, use this log file</td>
+</tr>
+<tr>
+<td><code>--log_file_max_size</code></td>
+<td>Defines the maximum size a log file can grow to. Unit is megabytes. If the value is 0, the maximum file size is unlimited. (default 1800)</td>
+</tr>
+<tr>
+<td><code>--logtostderr</code></td>
+<td>log to standard error instead of files (default true)</td>
+</tr>
+<tr>
+<td><code>--maxmind-edition-ids</code></td>
+<td>Maxmind edition ids to download GeoLite2 Databases. (default &quot;GeoLite2-City,GeoLite2-ASN&quot;)</td>
+</tr>
+<tr>
+<td><code>--maxmind-license-key</code></td>
+<td>Maxmind license key to download GeoLite2 Databases. <a href="https://blog.maxmind.com/2019/12/18/significant-changes-to-accessing-and-using-geolite2-databases" target="_blank">https://blog.maxmind.com/2019/12/18/significant-changes-to-accessing-and-using-geolite2-databases</a></td>
+</tr>
+<tr>
+<td><code>--metrics-per-host</code></td>
+<td>Export metrics per-host (default true)</td>
+</tr>
+<tr>
+<td><code>--profiler-port</code></td>
+<td>Port to use for expose the ingress controller Go profiler when it is enabled. (default 10245)</td>
+</tr>
+<tr>
+<td><code>--profiling</code></td>
+<td>Enable profiling via web interface host:port/debug/pprof/ (default true)</td>
+</tr>
+<tr>
+<td><code>--publish-service</code></td>
+<td>Service fronting the Ingress controller. Takes the form &quot;namespace/name&quot;. When used together with update-status, the controller mirrors the address of this service&apos;s endpoints to the load-balancer status of all Ingress objects it satisfies.</td>
+</tr>
+<tr>
+<td><code>--publish-status-address</code></td>
+<td>Customized address (or addresses, separated by comma) to set as the load-balancer status of Ingress objects this controller satisfies. Requires the update-status parameter.</td>
+</tr>
+<tr>
+<td><code>--report-node-internal-ip-address</code></td>
+<td>Set the load-balancer status of Ingress objects to internal Node addresses instead of external. Requires the update-status parameter.</td>
+</tr>
+<tr>
+<td><code>--skip_headers</code></td>
+<td>If true, avoid header prefixes in the log messages</td>
+</tr>
+<tr>
+<td><code>--skip_log_headers</code></td>
+<td>If true, avoid headers when opening log files</td>
+</tr>
+<tr>
+<td><code>--ssl-passthrough-proxy-port</code></td>
+<td>Port to use internally for SSL Passthrough. (default 442)</td>
+</tr>
+<tr>
+<td><code>--status-port</code></td>
+<td>Port to use for the lua HTTP endpoint configuration. (default 10246)</td>
+</tr>
+<tr>
+<td><code>--status-update-interval</code></td>
+<td>Time interval in seconds in which the status should check if an update is required. Default is 60 seconds (default 60)</td>
+</tr>
+<tr>
+<td><code>--stderrthreshold</code></td>
+<td>logs at or above this threshold go to stderr (default 2)</td>
+</tr>
+<tr>
+<td><code>--stream-port</code></td>
+<td>Port to use for the lua TCP/UDP endpoint configuration. (default 10247)</td>
+</tr>
+<tr>
+<td><code>--sync-period</code></td>
+<td>Period at which the controller forces the repopulation of its local object stores. Disabled by default.</td>
+</tr>
+<tr>
+<td><code>--sync-rate-limit</code></td>
+<td>Define the sync frequency upper limit (default 0.3)</td>
+</tr>
+<tr>
+<td><code>--tcp-services-configmap</code></td>
+<td>Name of the ConfigMap containing the definition of the TCP services to expose. The key in the map indicates the external port to be used. The value is a reference to a Service in the form &quot;namespace/name:port&quot;, where &quot;port&quot; can either be a port number or name. TCP ports 80 and 443 are reserved by the controller for servicing HTTP traffic.</td>
+</tr>
+<tr>
+<td><code>--udp-services-configmap</code></td>
+<td>Name of the ConfigMap containing the definition of the UDP services to expose. The key in the map indicates the external port to be used. The value is a reference to a Service in the form &quot;namespace/name:port&quot;, where &quot;port&quot; can either be a port name or number.</td>
+</tr>
+<tr>
+<td><code>--update-status</code></td>
+<td>Update the load-balancer status of Ingress objects this controller satisfies. Requires setting the publish-service parameter to a valid Service reference. (default true)</td>
+</tr>
+<tr>
+<td><code>--update-status-on-shutdown</code></td>
+<td>Update the load-balancer status of Ingress objects when the controller shuts down. Requires the update-status parameter. (default true)</td>
+</tr>
+<tr>
+<td><code>--shutdown-grace-period</code></td>
+<td>Seconds to wait after receiving the shutdown signal, before stopping the nginx process.</td>
+</tr>
+<tr>
+<td><code>-v, --v Level</code></td>
+<td>number for the log level verbosity</td>
+</tr>
+<tr>
+<td><code>--validating-webhook</code></td>
+<td>The address to start an admission controller on to validate incoming ingresses. Takes the form &quot;<host>:port&quot;. If not provided, no admission controller is started.</host></td>
+</tr>
+<tr>
+<td><code>--validating-webhook-certificate</code></td>
+<td>The path of the validating webhook certificate PEM.</td>
+</tr>
+<tr>
+<td><code>--validating-webhook-key</code></td>
+<td>The path of the validating webhook key PEM.</td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td>Show release information about the NGINX Ingress controller and exit.</td>
+</tr>
+<tr>
+<td><code>--vmodule</code></td>
+<td>comma-separated list of pattern=N settings for file-filtered logging</td>
+</tr>
+<tr>
+<td><code>--watch-namespace</code></td>
+<td>Namespace the controller watches for updates to Kubernetes objects. This includes Ingresses, Services and all configuration resources. All namespaces are watched if this parameter is left empty.</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="basic-usage.html" class="navigation navigation-prev " aria-label="Previous page: Basic Usage">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="custom-errors.html" class="navigation navigation-next " aria-label="Next page: Custom Errors">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Cli Arguments","level":"1.6.4","depth":2,"next":{"title":"Custom Errors","level":"1.6.5","depth":2,"path":"user-guide/custom-errors.md","ref":"user-guide/custom-errors.md","articles":[]},"previous":{"title":"Basic Usage","level":"1.6.3","depth":2,"path":"user-guide/basic-usage.md","ref":"user-guide/basic-usage.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Ingress Nginx 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"user-guide/cli-arguments.md","mtime":"2021-07-15T00:57:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-15T00:58:07.939Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

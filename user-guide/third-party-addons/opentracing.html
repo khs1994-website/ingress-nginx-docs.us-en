@@ -1,0 +1,1329 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Opentracing · Ingress Nginx 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../basic-usage.html" />
+    
+    
+    <link rel="prev" href="modsecurity.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Deploy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../deploy/baremetal.html">
+            
+                <a href="../../deploy/baremetal.html">
+            
+                    
+                    Baremetal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../deploy/hardening-guide.html">
+            
+                <a href="../../deploy/hardening-guide.html">
+            
+                    
+                    Hardening Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../deploy/">
+            
+                <a href="../../deploy/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../deploy/rbac.html">
+            
+                <a href="../../deploy/rbac.html">
+            
+                    
+                    Rbac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../deploy/upgrade.html">
+            
+                <a href="../../deploy/upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Developer Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../developer-guide/code-overview.html">
+            
+                <a href="../../developer-guide/code-overview.html">
+            
+                    
+                    Code Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../developer-guide/getting-started.html">
+            
+                <a href="../../developer-guide/getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../enhancements/">
+            
+                <a href="../../enhancements/">
+            
+                    
+                    Enhancements
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../enhancements/20190724-only-dynamic-ssl.html">
+            
+                <a href="../../enhancements/20190724-only-dynamic-ssl.html">
+            
+                    
+                    Remove Static SSL Configuration Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../enhancements/20190815-zone-aware-routing.html">
+            
+                <a href="../../enhancements/20190815-zone-aware-routing.html">
+            
+                    
+                    Availability Zone Aware Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../enhancements/YYYYMMDD-kep-template.html">
+            
+                <a href="../../enhancements/YYYYMMDD-kep-template.html">
+            
+                    
+                    KEP Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Affinity
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../examples/affinity/cookie/">
+            
+                <a href="../../examples/affinity/cookie/">
+            
+                    
+                    Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    Auth
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../examples/auth/basic/">
+            
+                <a href="../../examples/auth/basic/">
+            
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../examples/auth/client-certs/">
+            
+                <a href="../../examples/auth/client-certs/">
+            
+                    
+                    Client Certs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../examples/auth/external-auth/">
+            
+                <a href="../../examples/auth/external-auth/">
+            
+                    
+                    External Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../../examples/auth/oauth-external-auth/">
+            
+                <a href="../../examples/auth/oauth-external-auth/">
+            
+                    
+                    Oauth External Auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    Customization
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../examples/customization/configuration-snippets/">
+            
+                <a href="../../examples/customization/configuration-snippets/">
+            
+                    
+                    Configuration Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../examples/customization/custom-configuration/">
+            
+                <a href="../../examples/customization/custom-configuration/">
+            
+                    
+                    Custom Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../examples/customization/custom-errors/">
+            
+                <a href="../../examples/customization/custom-errors/">
+            
+                    
+                    Custom Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../../examples/customization/custom-headers/">
+            
+                <a href="../../examples/customization/custom-headers/">
+            
+                    
+                    Custom Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../../examples/customization/external-auth-headers/">
+            
+                <a href="../../examples/customization/external-auth-headers/">
+            
+                    
+                    External Auth Headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../../examples/customization/ssl-dh-param/">
+            
+                <a href="../../examples/customization/ssl-dh-param/">
+            
+                    
+                    Ssl Dh Param
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../../examples/customization/sysctl/">
+            
+                <a href="../../examples/customization/sysctl/">
+            
+                    
+                    Sysctl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../examples/docker-registry/">
+            
+                <a href="../../examples/docker-registry/">
+            
+                    
+                    Docker Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../examples/grpc/">
+            
+                <a href="../../examples/grpc/">
+            
+                    
+                    Grpc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../examples/multi-tls/">
+            
+                <a href="../../examples/multi-tls/">
+            
+                    
+                    Multi Tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../examples/psp/">
+            
+                <a href="../../examples/psp/">
+            
+                    
+                    Psp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../examples/rewrite/">
+            
+                <a href="../../examples/rewrite/">
+            
+                    
+                    Rewrite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../examples/static-ip/">
+            
+                <a href="../../examples/static-ip/">
+            
+                    
+                    Static Ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../examples/tls-termination/">
+            
+                <a href="../../examples/tls-termination/">
+            
+                    
+                    Tls Termination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../examples/">
+            
+                <a href="../../examples/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../../examples/PREREQUISITES.html">
+            
+                <a href="../../examples/PREREQUISITES.html">
+            
+                    
+                    PREREQUISITES
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    User Guide
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Nginx Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../nginx-configuration/annotations.html">
+            
+                <a href="../nginx-configuration/annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../nginx-configuration/configmap.html">
+            
+                <a href="../nginx-configuration/configmap.html">
+            
+                    
+                    Configmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../nginx-configuration/custom-template.html">
+            
+                <a href="../nginx-configuration/custom-template.html">
+            
+                    
+                    Custom Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../nginx-configuration/">
+            
+                <a href="../nginx-configuration/">
+            
+                    
+                    Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../nginx-configuration/log-format.html">
+            
+                <a href="../nginx-configuration/log-format.html">
+            
+                    
+                    Log Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    Third Party Addons
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="modsecurity.html">
+            
+                <a href="modsecurity.html">
+            
+                    
+                    Modsecurity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2.2" data-path="opentracing.html">
+            
+                <a href="opentracing.html">
+            
+                    
+                    Opentracing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../basic-usage.html">
+            
+                <a href="../basic-usage.html">
+            
+                    
+                    Basic Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../cli-arguments.html">
+            
+                <a href="../cli-arguments.html">
+            
+                    
+                    Cli Arguments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../custom-errors.html">
+            
+                <a href="../custom-errors.html">
+            
+                    
+                    Custom Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../default-backend.html">
+            
+                <a href="../default-backend.html">
+            
+                    
+                    Default Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../exposing-tcp-udp-services.html">
+            
+                <a href="../exposing-tcp-udp-services.html">
+            
+                    
+                    Exposing Tcp Udp Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../external-articles.html">
+            
+                <a href="../external-articles.html">
+            
+                    
+                    External Articles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../fcgi-services.html">
+            
+                <a href="../fcgi-services.html">
+            
+                    
+                    Fcgi Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../ingress-path-matching.html">
+            
+                <a href="../ingress-path-matching.html">
+            
+                    
+                    Ingress Path Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../miscellaneous.html">
+            
+                <a href="../miscellaneous.html">
+            
+                    
+                    Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../monitoring.html">
+            
+                <a href="../monitoring.html">
+            
+                    
+                    Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../multiple-ingress.html">
+            
+                <a href="../multiple-ingress.html">
+            
+                    
+                    Multiple Ingress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../tls.html">
+            
+                <a href="../tls.html">
+            
+                    
+                    Tls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../e2e-tests.html">
+            
+                <a href="../../e2e-tests.html">
+            
+                    
+                    E 2 E Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../how-it-works.html">
+            
+                <a href="../../how-it-works.html">
+            
+                    
+                    How It Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../kubectl-plugin.html">
+            
+                <a href="../../kubectl-plugin.html">
+            
+                    
+                    Kubectl Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../troubleshooting.html">
+            
+                <a href="../../troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Opentracing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="opentracing">OpenTracing</h1>
+<p>Enables requests served by NGINX for distributed tracing via The OpenTracing Project.</p>
+<p>Using the third party module <a href="https://github.com/opentracing-contrib/nginx-opentracing" target="_blank">opentracing-contrib/nginx-opentracing</a> the NGINX ingress controller can configure NGINX to enable <a href="http://opentracing.io" target="_blank">OpenTracing</a> instrumentation.
+By default this feature is disabled.</p>
+<h2 id="usage">Usage</h2>
+<p>To enable the instrumentation we must enable OpenTracing in the configuration ConfigMap:</p>
+<pre class="language-"><code>data:
+  enable-opentracing: &quot;true&quot;
+</code></pre><p>To enable or disable instrumentation for a single Ingress, use
+the <code>enable-opentracing</code> annotation:</p>
+<pre class="language-"><code>kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/enable-opentracing: &quot;true&quot;
+</code></pre><p>We must also set the host to use when uploading traces:</p>
+<pre class="language-"><code>zipkin-collector-host: zipkin.default.svc.cluster.local
+jaeger-collector-host: jaeger-agent.default.svc.cluster.local
+datadog-collector-host: datadog-agent.default.svc.cluster.local
+</code></pre><p>NOTE: While the option is called <code>jaeger-collector-host</code>, you will need to point this to a <code>jaeger-agent</code>, and not the <code>jaeger-collector</code> component.
+Alternatively, you can set <code>jaeger-endpoint</code> and specify the full endpoint for uploading traces. This will use TCP and should be used for a collector rather than an agent.</p>
+<p>Next you will need to deploy a distributed tracing system which uses OpenTracing.
+<a href="https://github.com/openzipkin/zipkin" target="_blank">Zipkin</a> and
+<a href="https://github.com/jaegertracing/jaeger" target="_blank">Jaeger</a> and
+<a href="https://github.com/DataDog/dd-opentracing-cpp" target="_blank">Datadog</a>
+have been tested.</p>
+<p>Other optional configuration options:</p>
+<pre class="language-"><code># specifies the name to use for the server span
+opentracing-operation-name
+
+# specifies specifies the name to use for the location span
+opentracing-location-operation-name
+
+# specifies the port to use when uploading traces, Default: 9411
+zipkin-collector-port
+
+# specifies the service name to use for any traces created, Default: nginx
+zipkin-service-name
+
+# specifies sample rate for any traces created, Default: 1.0
+zipkin-sample-rate
+
+# specifies the port to use when uploading traces, Default: 6831
+jaeger-collector-port
+
+# specifies the endpoint to use when uploading traces to a collector instead of an agent
+jaeger-endpoint
+
+# specifies the service name to use for any traces created, Default: nginx
+jaeger-service-name
+
+# specifies the traceparent/tracestate propagation format
+jaeger-propagation-format
+
+# specifies the sampler to be used when sampling traces.
+# The available samplers are: const, probabilistic, ratelimiting, remote, Default: const
+jaeger-sampler-type
+
+# specifies the argument to be passed to the sampler constructor, Default: 1
+jaeger-sampler-param
+
+# Specifies the custom remote sampler host to be passed to the sampler constructor. Must be a valid URL.
+# Default: http://127.0.0.1
+jaeger-sampler-host
+
+# Specifies the custom remote sampler port to be passed to the sampler constructor. Must be a number. Default: 5778
+jaeger-sampler-port
+
+# Specifies the header name used for passing trace context. Must be a string. Default: uber-trace-id
+jaeger-trace-context-header-name
+
+# Specifies the header name used for force sampling. Must be a string. Default: jaeger-debug-id
+jaeger-debug-header
+
+# Specifies the header name used to submit baggage if there is no root span. Must be a string. Default: jaeger-baggage
+jaeger-baggage-header
+
+# Specifies the header prefix used to propagate baggage. Must be a string. Default: uberctx-
+jaeger-tracer-baggage-header-prefix
+
+# specifies the port to use when uploading traces, Default 8126
+datadog-collector-port
+
+# specifies the service name to use for any traces created, Default: nginx
+datadog-service-name
+
+# specifies the environment this trace belongs to, Default: prod
+datadog-environment
+
+# specifies the operation name to use for any traces collected, Default: nginx.handle
+datadog-operation-name-override
+
+# Specifies to use client-side sampling for distributed priority sampling and ignore sample rate, Default: true
+datadog-priority-sampling
+
+# specifies sample rate for any traces created, Default: 1.0
+datadog-sample-rate
+</code></pre><p>All these options (including host) allow environment variables, such as <code>$HOSTNAME</code> or <code>$HOST_IP</code>. In the case of Jaeger, if you have a Jaeger agent running on each machine in your cluster, you can use something like <code>$HOST_IP</code> (which can be &apos;mounted&apos; with the <code>status.hostIP</code> fieldpath, as described <a href="https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/#capabilities-of-the-downward-api" target="_blank">here</a>) to make sure traces will be sent to the local agent.</p>
+<h2 id="examples">Examples</h2>
+<p>The following examples show how to deploy and test different distributed tracing systems. These example can be performed using Minikube.</p>
+<h3 id="zipkin">Zipkin</h3>
+<p>In the <a href="https://github.com/rnburn/zipkin-date-server" target="_blank">rnburn/zipkin-date-server</a>
+GitHub repository is an example of a dockerized date service. To install the example and Zipkin collector run:</p>
+<pre class="language-"><code>kubectl create -f https://raw.githubusercontent.com/rnburn/zipkin-date-server/master/kubernetes/zipkin.yaml
+kubectl create -f https://raw.githubusercontent.com/rnburn/zipkin-date-server/master/kubernetes/deployment.yaml
+</code></pre><p>Also we need to configure the NGINX controller ConfigMap with the required values:</p>
+<pre class="language-"><code>$ echo &apos;
+apiVersion: v1
+kind: ConfigMap
+data:
+  enable-opentracing: &quot;true&quot;
+  zipkin-collector-host: zipkin.default.svc.cluster.local
+metadata:
+  name: ingress-nginx-controller
+  namespace: kube-system
+&apos; | kubectl replace -f -
+</code></pre><p>In the Zipkin interface we can see the details:
+<img src="../../images/zipkin-demo.png" alt="zipkin screenshot" title="zipkin collector screenshot"></p>
+<h3 id="jaeger">Jaeger</h3>
+<ol>
+<li><p>Enable Ingress addon in Minikube:</p>
+<pre class="language-"><code> $ minikube addons enable ingress
+</code></pre></li>
+<li><p>Add Minikube IP to /etc/hosts:</p>
+<pre class="language-"><code> $ echo &quot;$(minikube ip) example.com&quot; | sudo tee -a /etc/hosts
+</code></pre></li>
+<li><p>Apply a basic Service and Ingress Resource:</p>
+<pre class="language-"><code> # Create Echoheaders Deployment
+ $ kubectl run echoheaders --image=k8s.gcr.io/echoserver:1.4 --replicas=1 --port=8080
+
+ # Expose as a Cluster-IP
+ $ kubectl expose deployment echoheaders --port=80 --target-port=8080 --name=echoheaders-x
+
+ # Apply the Ingress Resource
+ $ echo &apos;
+   apiVersion: networking.k8s.io/v1beta1
+   kind: Ingress
+   metadata:
+     name: echo-ingress
+   spec:
+     rules:
+     - host: example.com
+       http:
+         paths:
+         - backend:
+             serviceName: echoheaders-x
+             servicePort: 80
+           path: /echo
+   &apos; | kubectl apply -f -
+</code></pre></li>
+<li><p>Enable OpenTracing and set the jaeger-collector-host:</p>
+<pre class="language-"><code> $ echo &apos;
+   apiVersion: v1
+   kind: ConfigMap
+   data:
+     enable-opentracing: &quot;true&quot;
+     jaeger-collector-host: jaeger-agent.default.svc.cluster.local
+   metadata:
+     name: ingress-nginx-controller
+     namespace: kube-system
+   &apos; | kubectl replace -f -
+</code></pre></li>
+<li><p>Apply the Jaeger All-In-One Template:</p>
+<pre class="language-"><code> $ kubectl apply -f https://raw.githubusercontent.com/jaegertracing/jaeger-kubernetes/master/all-in-one/jaeger-all-in-one-template.yml
+</code></pre></li>
+<li><p>Make a few requests to the Service:</p>
+<pre class="language-"><code> $ curl example.com/echo -d &quot;meow&quot;
+
+ CLIENT VALUES:
+ client_address=172.17.0.5
+ command=POST
+ real path=/echo
+ query=nil
+ request_version=1.1
+ request_uri=http://example.com:8080/echo
+
+ SERVER VALUES:
+ server_version=nginx: 1.10.0 - lua: 10001
+
+ HEADERS RECEIVED:
+ accept=*/*
+ connection=close
+ content-length=4
+ content-type=application/x-www-form-urlencoded
+ host=example.com
+ user-agent=curl/7.54.0
+ x-forwarded-for=192.168.99.1
+ x-forwarded-host=example.com
+ x-forwarded-port=80
+ x-forwarded-proto=http
+ x-original-uri=/echo
+ x-real-ip=192.168.99.1
+ x-scheme=http
+ BODY:
+ meow
+</code></pre></li>
+<li><p>View the Jaeger UI:</p>
+<pre class="language-"><code> $ minikube service jaeger-query --url
+
+ http://192.168.99.100:30183
+</code></pre><p> In the Jaeger interface we can see the details:
+ <img src="../../images/jaeger-demo.png" alt="jaeger screenshot" title="jaeger collector screenshot"></p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="modsecurity.html" class="navigation navigation-prev " aria-label="Previous page: Modsecurity">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../basic-usage.html" class="navigation navigation-next " aria-label="Next page: Basic Usage">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Opentracing","level":"1.6.2.2","depth":3,"next":{"title":"Basic Usage","level":"1.6.3","depth":2,"path":"user-guide/basic-usage.md","ref":"user-guide/basic-usage.md","articles":[]},"previous":{"title":"Modsecurity","level":"1.6.2.1","depth":3,"path":"user-guide/third-party-addons/modsecurity.md","ref":"user-guide/third-party-addons/modsecurity.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Ingress Nginx 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"user-guide/third-party-addons/opentracing.md","mtime":"2021-07-15T00:57:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-15T00:58:07.939Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
